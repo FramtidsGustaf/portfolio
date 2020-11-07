@@ -24,19 +24,21 @@ body {
     color: #ffba49;
     height: 70vh;
     margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Archivo", sans-serif;
-    font-size: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 1fr);
     border-radius: 2px;
     overflow: hidden;
   }
-  .menu #menuTitle #ball {
-    background-color: #20a39e;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
+  .menu #menuTitle #myName {
+    grid-column: 3;
+    grid-row: 3;
+    font-size: 2rem;
+    margin: 10px;
+    font-family: "Varela Round", sans-serif;
+    align-self: flex-end;
+    justify-self: flex-end;
+    color: #171d1c;
   }
   .menu ul {
     list-style: none;
