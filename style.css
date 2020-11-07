@@ -11,7 +11,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .menu {
+  .main {
     padding: 10px;
     height: 100vh;
     background-color: #171d1c;
@@ -19,18 +19,23 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
-  .menu #menuTitle {
+  .main #mainContent {
     background-color: #ffba49;
-    color: #ffba49;
     height: 70vh;
     margin: 10px;
     display: grid;
     grid-template-columns: repeat(3, 33%);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 60px 2fr;
     border-radius: 2px;
-    overflow: hidden;
+    overflow: scroll;
   }
-  .menu #menuTitle #myName {
+  .main #mainContent .content {
+    margin: 10px;
+    grid-column: 1/4;
+    grid-row: 2;
+    font-family: "Anonymous Pro", monospace;
+  }
+  .main #mainContent #myName {
     grid-column: 3;
     grid-row: 3;
     font-size: 2rem;
@@ -39,8 +44,9 @@ body {
     align-self: flex-end;
     justify-self: flex-end;
     color: #171d1c;
+    user-select: none;
   }
-  .menu ul {
+  .main ul {
     list-style: none;
     color: #efe9f4;
     font-family: "Varela Round", sans-serif;
@@ -48,61 +54,15 @@ body {
     text-decoration: underline;
   }
 
-  .aboutMe {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    background-color: #d3d5d7;
-    color: #050517;
-    font-family: "Varela Round", sans-serif;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 80vh 1fr;
-    gap: 10px;
-  }
-  .aboutMe h1 {
-    grid-column: 1/3;
-    grid-row: 1;
-    padding: 10px;
-    text-decoration: overline;
-    background-color: #050517;
-    color: #d3d5d7;
-    width: fit-content;
-    font-family: "Varela Round", sans-serif;
-    border-radius: 0 0 2px 0;
-  }
-  .aboutMe .cross {
-    justify-self: end;
-    height: 100%;
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffba49;
-  }
-  .aboutMe .cross .first {
-    background-color: #050517;
-    height: 5px;
-    width: 50px;
-    transform: rotate(45deg);
-    border-radius: 2px;
-  }
-  .aboutMe .cross .first .second {
-    background-color: #050517;
-    height: 5px;
-    width: 50px;
-    transform: rotate(90deg);
-    border-radius: 2px;
-  }
-  .aboutMe .aboutMeContent {
-    grid-column: 1/4;
-    grid-row: 2;
-    color: #050517;
-    padding: 5px;
-  }
-
   .hidden {
     display: none;
+  }
+
+  .picked {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #171d1c;
   }
 }
 
