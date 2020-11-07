@@ -19,8 +19,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
-  .main #mainContent {
-    background-color: #ffba49;
+  .main .mainContent {
     height: 70vh;
     margin: 10px;
     display: grid;
@@ -28,14 +27,15 @@ body {
     grid-template-rows: 60px 2fr;
     border-radius: 2px;
     overflow: scroll;
+    transition: background-color 0.2s;
   }
-  .main #mainContent .content {
+  .main .mainContent .content {
     margin: 10px;
     grid-column: 1/4;
     grid-row: 2;
     font-family: "Anonymous Pro", monospace;
   }
-  .main #mainContent #myName {
+  .main .mainContent #myName {
     grid-column: 3;
     grid-row: 3;
     font-size: 2rem;
@@ -47,21 +47,40 @@ body {
     user-select: none;
   }
   .main ul {
+    height: 175px;
     list-style: none;
     color: #efe9f4;
     font-family: "Varela Round", sans-serif;
     font-size: 3rem;
-    text-decoration: underline;
+  }
+  .main ul li {
+    margin-left: 10px;
+    transition: background-color 0.2s;
+    padding: 2px;
+    width: fit-content;
+    border-radius: 2px;
   }
 
   .hidden {
     display: none;
   }
 
-  .picked {
-    position: absolute;
-    top: 30px;
-    left: 30px;
+  .landing {
+    background-color: #ffba49;
+  }
+
+  .aboutMePicked {
+    background-color: #73e2a7;
+    color: #171d1c;
+  }
+
+  .portfolioPicked {
+    background-color: #b41882;
+    color: #171d1c;
+  }
+
+  .contactMePicked {
+    background-color: #70abaf;
     color: #171d1c;
   }
 }

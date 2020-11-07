@@ -1,5 +1,9 @@
 $backgroundMenu: #171d1c;
 $textMenu: #efe9f4;
+$aboutMe: #73e2a7;
+$contactMe: #70abaf;
+$portfolio: #b41882;
+$landing: #ffba49;
 * {
   margin: 0;
   padding: 0;
@@ -18,8 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    #mainContent {
-      background-color: #ffba49;
+    .mainContent {
       height: 70vh;
       margin: 10px;
       display: grid;
@@ -27,6 +30,7 @@ body {
       grid-template-rows: 60px 2fr;
       border-radius: 2px;
       overflow: scroll;
+      transition: background-color 0.2s;
       .content {
         margin: 10px;
         grid-column: 1/4;
@@ -46,20 +50,38 @@ body {
       }
     }
     ul {
+      height: 175px;
       list-style: none;
       color: $textMenu;
       font-family: "Varela Round", sans-serif;
       font-size: 3rem;
-      text-decoration: underline;
+      li {
+        margin-left: 10px;
+        transition: background-color 0.2s;
+        padding: 2px;
+        width: fit-content;
+        border-radius: 2px;
+      }
     }
   }
   .hidden {
     display: none;
   }
-  .picked {
-    position: absolute;
-    top: 30px;
-    left: 30px;
+  .landing {
+    background-color: $landing;
+  }
+  .aboutMePicked {
+    background-color: $aboutMe;
+    color: $backgroundMenu;
+  }
+
+  .portfolioPicked {
+    background-color: $portfolio;
+    color: $backgroundMenu;
+  }
+
+  .contactMePicked {
+    background-color: $contactMe;
     color: $backgroundMenu;
   }
 }
