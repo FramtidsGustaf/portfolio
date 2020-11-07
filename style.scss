@@ -1,0 +1,103 @@
+$backgroundMenu: #171d1c;
+$textMenu: #efe9f4;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+  .menu {
+    padding: 10px;
+    height: 100vh;
+    background-color: $backgroundMenu;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    #menuTitle {
+      background-color: #ffba49;
+      color: #ffba49;
+      height: 70vh;
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Archivo", sans-serif;
+      font-size: 7rem;
+      border-radius: 2px;
+      overflow: hidden;
+      #ball {
+        background-color: #20a39e;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+      }
+    }
+    ul {
+      list-style: none;
+      color: $textMenu;
+      font-family: "Varela Round", sans-serif;
+      font-size: 3rem;
+      text-decoration: underline;
+    }
+  }
+  .aboutMe {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #d3d5d7;
+    color: #050517;
+    font-family: "Varela Round", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 80vh 1fr;
+    gap: 10px;
+    h1 {
+      grid-column: 1/3;
+      grid-row: 1;
+      padding: 10px;
+      text-decoration: overline;
+      background-color: #050517;
+      color: #d3d5d7;
+      width: fit-content;
+      font-family: "Varela Round", sans-serif;
+      border-radius: 0 0 2px 0;
+    }
+    .cross {
+      justify-self: end;
+      height: 100%;
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffba49;
+      .first {
+        background-color: #050517;
+        height: 5px;
+        width: 50px;
+        transform: rotate(45deg);
+        border-radius: 2px;
+        .second {
+          background-color: #050517;
+          height: 5px;
+          width: 50px;
+          transform: rotate(90deg);
+          border-radius: 2px;
+        }
+      }
+    }
+    .aboutMeContent {
+      grid-column: 1/4;
+      grid-row: 2;
+      color: #050517;
+      padding: 5px;
+    }
+  }
+  .hidden {
+    display: none;
+  }
+}
