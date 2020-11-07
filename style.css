@@ -70,18 +70,33 @@ body {
   }
 
   .aboutMePicked {
-    background-color: #73e2a7;
+    background-color: #f7a072;
     color: #171d1c;
+    transform: rotate(180deg);
+  }
+
+  .aboutMeBackground {
+    background-color: #f7a072;
   }
 
   .portfolioPicked {
     background-color: #b41882;
     color: #171d1c;
+    transform: rotate(180deg);
+  }
+
+  .portfolioBackground {
+    background-color: #b41882;
   }
 
   .contactMePicked {
-    background-color: #70abaf;
+    background-color: #247ba0;
     color: #171d1c;
+    transform: rotate(180deg);
+  }
+
+  .contactMeBackground {
+    background-color: #247ba0;
   }
 }
 

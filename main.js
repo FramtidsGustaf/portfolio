@@ -11,15 +11,19 @@ class Main {
       aboutMe.classList.remove("aboutMePicked");
       portfolio.classList.remove("portfolioPicked");
       contactMe.classList.remove("contactMePicked");
-      mainContentBackground.classList.remove("aboutMePicked", "portfolioPicked", "contactMePicked");
+      mainContentBackground.classList.remove(
+        "aboutMeBackground",
+        "portfolioBackground",
+        "contactMeBackground"
+      );
       if (e.target == aboutMe) {
-        mainContentBackground.classList.add("aboutMePicked");
+        mainContentBackground.classList.add("aboutMeBackground");
         aboutMe.classList.add("aboutMePicked");
       } else if (e.target === portfolio) {
-        mainContentBackground.classList.add("portfolioPicked");
+        mainContentBackground.classList.add("portfolioBackground");
         portfolio.classList.add("portfolioPicked");
       } else if (e.target === contactMe) {
-        mainContentBackground.classList.add("contactMePicked");
+        mainContentBackground.classList.add("contactMeBackground");
         contactMe.classList.add("contactMePicked");
       }
     });
