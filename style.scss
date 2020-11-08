@@ -81,6 +81,8 @@ body {
   }
   .aboutMeBackground {
     background-color: $aboutMe;
+    background-image: url(/images/gustafmedvovvar.png);
+    background-size: cover;
   }
   .portfolioPicked {
     @include picked($portfolio);

@@ -77,6 +77,8 @@ body {
 
   .aboutMeBackground {
     background-color: #f7a072;
+    background-image: url(/images/gustafmedvovvar.png);
+    background-size: cover;
   }
 
   .portfolioPicked {
