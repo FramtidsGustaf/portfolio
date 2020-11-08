@@ -36,7 +36,7 @@ body {
       grid-template-rows: 60px 2fr;
       border-radius: 2px;
       overflow: scroll;
-      transition: background-color 0.2s;
+      transition: background-color 0.2s ease-out;
       .content {
         margin: 10px;
         grid-column: 1/4;
