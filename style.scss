@@ -20,7 +20,7 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   .main {
     padding: 10px;
     height: 100vh;
@@ -35,7 +35,7 @@ body {
       grid-template-columns: repeat(3, 33%);
       grid-template-rows: 60px 2fr;
       border-radius: 2px;
-      overflow: scroll;
+      overflow: hidden;
       transition: background-color 0.2s ease-out;
       .content {
         margin: 10px;
@@ -77,29 +77,103 @@ body {
       }
     }
   }
-  .hidden {
-    display: none;
+}
+@media screen and (min-width: 992px) {
+  .main {
+    padding: 1.5%;
+    height: 100vh;
+    width: 100%;
+    background-color: $backgroundMenu;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    .mainContent {
+      grid-column: 2/4;
+      grid-row: 1/4;
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 33%);
+      grid-template-rows: 60px 2fr;
+      border-radius: 2px;
+      overflow: hidden;
+      transition: background-color 0.2s ease-out;
+      .content {
+        margin: 10px;
+        grid-column: 1/4;
+        grid-row: 2;
+        font-family: "Anonymous Pro", monospace;
+      }
+      img {
+        justify-self: flex-end;
+        align-self: flex-end;
+        height: 70%;
+        grid-column: 2/4;
+        grid-row: 2/4;
+      }
+      #myName {
+        grid-column: 3;
+        grid-row: 3;
+        font-size: 2rem;
+        margin: 10px;
+        font-family: "Varela Round", sans-serif;
+        align-self: flex-end;
+        justify-self: flex-end;
+        color: $backgroundMenu;
+        user-select: none;
+      }
+    }
+    #listContainer {
+      grid-column: 1;
+      grid-row: 3;
+      display: flex;
+      align-items: flex-end;
+      #menuList {
+        height: 175px;
+        list-style: none;
+        color: $textMenu;
+        font-family: "Varela Round", sans-serif;
+        font-size: 3rem;
+        li {
+          cursor: pointer;
+          margin-left: 10px;
+          transition: background-color 0.2s;
+          padding: 2px;
+          width: fit-content;
+          border-radius: 2px;
+          user-select: none;
+          &:hover {
+            background-color: $textMenu;
+            color: $backgroundMenu;
+          }
+        }
+      }
+    }
   }
-  .landing {
-    background-color: $landing;
-  }
-  .aboutMePicked {
-    @include picked($aboutMe);
-  }
-  .aboutMeBackground {
-    background-color: $aboutMe;
-    background-size: cover;
-  }
-  .portfolioPicked {
-    @include picked($portfolio);
-  }
-  .portfolioBackground {
-    background-color: $portfolio;
-  }
-  .contactMePicked {
-    @include picked($contactMe);
-  }
-  .contactMeBackground {
-    background-color: $contactMe;
-  }
+}
+.hidden {
+  display: none;
+}
+.landing {
+  background-color: $landing;
+}
+.aboutMePicked {
+  @include picked($aboutMe);
+}
+.aboutMeBackground {
+  background-color: $aboutMe;
+  background-size: cover;
+}
+.portfolioPicked {
+  @include picked($portfolio);
+}
+.portfolioBackground {
+  background-color: $portfolio;
+}
+.contactMePicked {
+  @include picked($contactMe);
+}
+.contactMeBackground {
+  background-color: $contactMe;
 }

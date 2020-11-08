@@ -10,7 +10,7 @@ body {
   overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   .main {
     padding: 10px;
     height: 100vh;
@@ -26,7 +26,7 @@ body {
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: 60px 2fr;
     border-radius: 2px;
-    overflow: scroll;
+    overflow: hidden;
     transition: background-color 0.2s ease-out;
   }
   .main .mainContent .content {
@@ -67,45 +67,117 @@ body {
     width: fit-content;
     border-radius: 2px;
   }
-
-  .hidden {
-    display: none;
+}
+@media screen and (min-width: 992px) {
+  .main {
+    padding: 1.5%;
+    height: 100vh;
+    width: 100%;
+    background-color: #171d1c;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
-
-  .landing {
-    background-color: #ffba49;
+  .main .mainContent {
+    grid-column: 2/4;
+    grid-row: 1/4;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: 60px 2fr;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: background-color 0.2s ease-out;
   }
-
-  .aboutMePicked {
-    background-color: #f7a072;
+  .main .mainContent .content {
+    margin: 10px;
+    grid-column: 1/4;
+    grid-row: 2;
+    font-family: "Anonymous Pro", monospace;
+  }
+  .main .mainContent img {
+    justify-self: flex-end;
+    align-self: flex-end;
+    height: 70%;
+    grid-column: 2/4;
+    grid-row: 2/4;
+  }
+  .main .mainContent #myName {
+    grid-column: 3;
+    grid-row: 3;
+    font-size: 2rem;
+    margin: 10px;
+    font-family: "Varela Round", sans-serif;
+    align-self: flex-end;
+    justify-self: flex-end;
     color: #171d1c;
-    transform: rotate(180deg);
+    user-select: none;
   }
-
-  .aboutMeBackground {
-    background-color: #f7a072;
-    background-size: cover;
+  .main #listContainer {
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    align-items: flex-end;
   }
-
-  .portfolioPicked {
-    background-color: #b41882;
+  .main #listContainer #menuList {
+    height: 175px;
+    list-style: none;
+    color: #efe9f4;
+    font-family: "Varela Round", sans-serif;
+    font-size: 3rem;
+  }
+  .main #listContainer #menuList li {
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s;
+    padding: 2px;
+    width: fit-content;
+    border-radius: 2px;
+    user-select: none;
+  }
+  .main #listContainer #menuList li:hover {
+    background-color: #efe9f4;
     color: #171d1c;
-    transform: rotate(180deg);
   }
+}
+.hidden {
+  display: none;
+}
 
-  .portfolioBackground {
-    background-color: #b41882;
-  }
+.landing {
+  background-color: #ffba49;
+}
 
-  .contactMePicked {
-    background-color: #247ba0;
-    color: #171d1c;
-    transform: rotate(180deg);
-  }
+.aboutMePicked {
+  background-color: #f7a072;
+  color: #171d1c;
+  transform: rotate(180deg);
+}
 
-  .contactMeBackground {
-    background-color: #247ba0;
-  }
+.aboutMeBackground {
+  background-color: #f7a072;
+  background-size: cover;
+}
+
+.portfolioPicked {
+  background-color: #b41882;
+  color: #171d1c;
+  transform: rotate(180deg);
+}
+
+.portfolioBackground {
+  background-color: #b41882;
+}
+
+.contactMePicked {
+  background-color: #247ba0;
+  color: #171d1c;
+  transform: rotate(180deg);
+}
+
+.contactMeBackground {
+  background-color: #247ba0;
 }
 
 /*# sourceMappingURL=style.css.map */
