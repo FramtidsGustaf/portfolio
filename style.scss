@@ -43,6 +43,13 @@ body {
         grid-row: 2;
         font-family: "Anonymous Pro", monospace;
       }
+      img {
+        justify-self: flex-end;
+        align-self: flex-end;
+        height: 70%;
+        grid-column: 2/4;
+        grid-row: 2/4;
+      }
       #myName {
         grid-column: 3;
         grid-row: 3;
@@ -81,7 +88,6 @@ body {
   }
   .aboutMeBackground {
     background-color: $aboutMe;
-    background-image: url(/images/gustafmedvovvar.png);
     background-size: cover;
   }
   .portfolioPicked {
