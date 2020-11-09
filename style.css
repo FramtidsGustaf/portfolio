@@ -27,7 +27,7 @@ body {
     grid-template-rows: 60px 2fr;
     border-radius: 2px;
     overflow: hidden;
-    transition: background-color 0.2s ease-out;
+    transition: background-color 0.5s ease-out;
   }
   .main .mainContent .content {
     margin: 10px;
@@ -67,6 +67,10 @@ body {
     width: fit-content;
     border-radius: 2px;
   }
+
+  .hidden {
+    display: none;
+  }
 }
 @media screen and (min-width: 992px) {
   .main {
@@ -75,12 +79,11 @@ body {
     width: 100%;
     background-color: #171d1c;
     display: grid;
+    transition: all 0.5s ease-out;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
   }
   .main .mainContent {
-    grid-column: 2/4;
-    grid-row: 1/4;
+    grid-area: mainContent;
     height: 100%;
     width: 100%;
     display: grid;
@@ -88,7 +91,7 @@ body {
     grid-template-rows: 60px 2fr;
     border-radius: 2px;
     overflow: hidden;
-    transition: background-color 0.2s ease-out;
+    transition: all 0.2s ease-out;
   }
   .main .mainContent .content {
     margin: 10px;
@@ -114,20 +117,20 @@ body {
     color: #171d1c;
     user-select: none;
   }
-  .main #listContainer {
-    grid-column: 1;
-    grid-row: 3;
+  .main .listContainer {
+    grid-area: menu;
     display: flex;
     align-items: flex-end;
+    margin-bottom: 10px;
   }
-  .main #listContainer #menuList {
+  .main .listContainer #menuList {
     height: 175px;
     list-style: none;
     color: #efe9f4;
     font-family: "Varela Round", sans-serif;
     font-size: 3rem;
   }
-  .main #listContainer #menuList li {
+  .main .listContainer #menuList li {
     cursor: pointer;
     margin-left: 10px;
     transition: background-color 0.2s;
@@ -136,15 +139,22 @@ body {
     border-radius: 2px;
     user-select: none;
   }
-  .main #listContainer #menuList li:hover {
+  .main .listContainer #menuList li:hover {
     background-color: #efe9f4;
     color: #171d1c;
   }
-}
-.hidden {
-  display: none;
-}
+  .main .hidden {
+    display: none;
+  }
 
+  .gTABefore {
+    grid-template-areas: ". mainContent mainContent" ". mainContent mainContent" "menu mainContent mainContent";
+  }
+
+  .gTAAfter {
+    grid-template-areas: "mainContent mainContent ." "mainContent mainContent ." "mainContent mainContent .";
+  }
+}
 .landing {
   background-color: #ffba49;
 }
