@@ -2,40 +2,22 @@ class Main {
   constructor() {
     this.menuPick();
   }
+
   menuPick() {
-    let main = document.getElementsByClassName("main")[0];
-    let mainContentBackground = document.getElementsByClassName("mainContent")[0];
-    let aboutMe = document.getElementsByClassName("aboutMe")[0];
-    let portfolio = document.getElementsByClassName("portfolio")[0];
-    let contactMe = document.getElementsByClassName("contactMe")[0];
-    let myName = document.getElementById("myName");
-    let puppiePicture = document.getElementsByClassName("puppiePicture")[0];
+    const contentPages = document.getElementsByClassName("contentPages");
+    const menuItems = document.getElementsByClassName("menuItems");
+    const listContainer = document.getElementsByClassName("listContainer")[0];
 
-    menuList.addEventListener("click", (e) => {
-      aboutMe.classList.remove("aboutMePicked");
-      portfolio.classList.remove("portfolioPicked");
-      contactMe.classList.remove("contactMePicked");
-      mainContentBackground.classList.remove(
-        "aboutMeBackground",
-        "portfolioBackground",
-        "contactMeBackground"
-      );
-      if (!puppiePicture.classList.contains("hidden")) {
-        puppiePicture.classList.add("hidden");
-      }
-      myName.classList.remove("hidden");
-
-      if (e.target == aboutMe) {
-        mainContentBackground.classList.add("aboutMeBackground");
-        aboutMe.classList.add("aboutMePicked");
-        myName.classList.add("hidden");
-        puppiePicture.classList.remove("hidden");
-      } else if (e.target === portfolio) {
-        mainContentBackground.classList.add("portfolioBackground");
-        portfolio.classList.add("portfolioPicked");
-      } else if (e.target === contactMe) {
-        mainContentBackground.classList.add("contactMeBackground");
-        contactMe.classList.add("contactMePicked");
+    listContainer.addEventListener("click", (e) => {
+      for (let i = 0; i < contentPages.length; i++) {
+        if (contentPages[i].classList.contains("revealPage")) {
+          contentPages[i].classList.remove("revealPage");
+          menuItems[i].classList.remove(`picked${i}`);
+        }
+        if (e.target === menuItems[i]) {
+          contentPages[i].classList.add("revealPage");
+          menuItems[i].classList.add(`picked${i}`);
+        }
       }
     });
   }
