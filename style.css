@@ -301,18 +301,27 @@ body {
     color: #171d1c;
     font-size: 10rem;
     cursor: pointer;
-    transform: translate(-280%);
+    transition: transform 0.3s ease-out;
+    transform: translate(-1000%);
   }
   .main .contactMePage #linkedInContainer .linkedIn:hover {
     color: #efe9f4;
   }
-  .main .contactMePage #githubContainer #github {
+  .main .contactMePage #linkedInContainer .revealIcon {
+    transform: translate(0%);
+  }
+  .main .contactMePage #githubContainer .github {
     color: #efe9f4;
     font-size: 10rem;
     cursor: pointer;
+    transition: transform 0.3s ease-out;
+    transform: translate(1000%);
   }
-  .main .contactMePage #githubContainer #github:hover {
+  .main .contactMePage #githubContainer .github:hover {
     color: #171d1c;
+  }
+  .main .contactMePage #githubContainer .revealIcon {
+    transform: translate(0%);
   }
   .main .listContainer {
     grid-area: menu;
@@ -346,15 +355,15 @@ body {
   }
   .main .listContainer #menuList .picked0 {
     background-color: #ffba49;
-    transform: translate(50%);
+    transform: rotate(-5deg);
   }
   .main .listContainer #menuList .picked1 {
     background-color: #b41882;
-    transform: translate(50%);
+    transform: rotate(-5deg);
   }
   .main .listContainer #menuList .picked2 {
     background-color: #247ba0;
-    transform: translate(50%);
+    transform: rotate(-5deg);
   }
   .main .revealPage {
     transform: translateY(0%);

@@ -243,20 +243,29 @@ body {
           color: $backgroundMenu;
           font-size: 10rem;
           cursor: pointer;
-          transform: translate(-280%);
+          transition: transform 0.3s ease-out;
+          transform: translate(-1000%);
           &:hover {
             color: $textMenu;
           }
         }
+        .revealIcon {
+          transform: translate(0%);
+        }
       }
       #githubContainer {
-        #github {
+        .github {
           color: $textMenu;
           font-size: 10rem;
           cursor: pointer;
+          transition: transform 0.3s ease-out;
+          transform: translate(1000%);
           &:hover {
             color: $backgroundMenu;
           }
+        }
+        .revealIcon {
+          transform: translate(0%);
         }
       }
     }
@@ -291,18 +300,15 @@ body {
         }
         .picked0 {
           @include picked($aboutMe);
-          //transform: rotate(-5deg);
-          transform: translate(50%);
+          transform: rotate(-5deg);
         }
         .picked1 {
           @include picked($portfolio);
-          //transform: rotate(-5deg);
-          transform: translate(50%);
+          transform: rotate(-5deg);
         }
         .picked2 {
           @include picked($contactMe);
-          //transform: rotate(-5deg);
-          transform: translate(50%);
+          transform: rotate(-5deg);
         }
       }
     }
