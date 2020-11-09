@@ -20,8 +20,38 @@ body {
     overflow: hidden;
     padding-top: 20px;
   }
+  .main .startButton {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    padding: 10px;
+    left: 50%;
+    top: 50%;
+    border: none;
+    border-radius: 5px;
+    background-color: #efe9f4;
+    color: #171d1c;
+    font-family: "Varela Round", sans-serif;
+    font-size: 150%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  .main .buttonDisapear {
+    animation-name: buttonDisapear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes buttonDisapear {
+    100% {
+      transform: translate(-50%, -100vh);
+    }
+  }
   .main .aboutMePage {
-    background-color: #f7a072;
+    background-color: #ffba49;
     grid-column: 2;
     grid-row: 1;
     display: grid;
@@ -29,7 +59,9 @@ body {
     grid-template-rows: 10% 80% 10%;
     border-radius: 2px;
     overflow: hidden;
-    transition: background-color 0.5s ease-out;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-110%);
+    margin-bottom: 3%;
   }
   .main .aboutMePage .content {
     grid-column: 1/4;
@@ -43,16 +75,6 @@ body {
     grid-column: 2/4;
     grid-row: 2/4;
   }
-  .main .aboutMePage .myName {
-    grid-column: 3;
-    grid-row: 3;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .main .aboutMePage .myName p {
-    font-size: 1.3rem;
-    font-family: "Varela Round", sans-serif;
-  }
   .main .portfolioPage {
     background-color: #b41882;
     grid-column: 2;
@@ -62,29 +84,14 @@ body {
     grid-template-rows: 10% 80% 10%;
     border-radius: 2px;
     overflow: hidden;
-    transition: background-color 0.5s ease-out;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-110%);
+    margin-bottom: 3%;
   }
   .main .portfolioPage .content {
     grid-column: 1/4;
     grid-row: 2;
     font-family: "Anonymous Pro", monospace;
-  }
-  .main .portfolioPage img {
-    justify-self: flex-end;
-    align-self: flex-end;
-    height: 70%;
-    grid-column: 2/4;
-    grid-row: 2/4;
-  }
-  .main .portfolioPage .myName {
-    grid-column: 3;
-    grid-row: 3;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .main .portfolioPage .myName p {
-    font-size: 1.3rem;
-    font-family: "Varela Round", sans-serif;
   }
   .main .contactMePage {
     background-color: #247ba0;
@@ -95,54 +102,55 @@ body {
     grid-template-rows: 10% 80% 10%;
     border-radius: 2px;
     overflow: hidden;
-    transition: background-color 0.5s ease-out;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-110%);
+    margin-bottom: 3%;
   }
   .main .contactMePage .content {
     grid-column: 1/4;
     grid-row: 2;
     font-family: "Anonymous Pro", monospace;
   }
-  .main .contactMePage img {
-    justify-self: flex-end;
-    align-self: flex-end;
-    height: 70%;
-    grid-column: 2/4;
-    grid-row: 2/4;
-  }
-  .main .contactMePage .myName {
-    grid-column: 3;
-    grid-row: 3;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .main .contactMePage .myName p {
-    font-size: 1.3rem;
-    font-family: "Varela Round", sans-serif;
-  }
   .main .listContainer {
     grid-column: 2;
     grid-row: 2;
     width: 100%;
+  }
+  .main .listContainer #menuList {
     color: #efe9f4;
-  }
-  .main .listContainer ul {
-    list-style: none;
-  }
-  .main .listContainer ul li {
     font-family: "Varela Round", sans-serif;
     font-size: 2.5rem;
+    list-style: none;
+  }
+  .main .listContainer #menuList .menuItems {
     transition: background-color 0.2s;
     width: fit-content;
     border-radius: 2px;
+    user-select: none;
+    transform: translate(-150%);
+    transition: transform 0.2s ease-out;
+  }
+  .main .listContainer #menuList .revealMenuItem {
+    transform: translate(0%);
+  }
+  .main .listContainer #menuList .picked0 {
+    background-color: #ffba49;
+    transform: rotate(180deg);
+  }
+  .main .listContainer #menuList .picked1 {
+    background-color: #b41882;
+    transform: rotate(180deg);
+  }
+  .main .listContainer #menuList .picked2 {
+    background-color: #247ba0;
+    transform: rotate(180deg);
+  }
+  .main .revealPage {
+    transform: translate(0%);
   }
 
   .hidden {
     display: none;
-  }
-
-  .picked0 {
-    background-color: #f7a072;
-    transform: translate(10deg);
   }
 }
 @media screen and (min-width: 992px) {
@@ -155,18 +163,53 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: ". mainContent mainContent" ". mainContent mainContent" "menu mainContent mainContent";
   }
+  .main .startButton {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    padding: 10px;
+    left: 50%;
+    top: 50%;
+    border: none;
+    border-radius: 5px;
+    background-color: #efe9f4;
+    color: #171d1c;
+    font-family: "Varela Round", sans-serif;
+    font-size: 150%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  .main .startButton:hover {
+    background-color: #171d1c;
+    color: #efe9f4;
+    border: solid 2px #efe9f4;
+  }
+  .main .buttonDisapear {
+    animation-name: buttonDisapear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes buttonDisapear {
+    100% {
+      transform: translate(-50%, -100vh);
+    }
+  }
   .main .aboutMePage {
-    background-color: #f7a072;
+    background-color: #ffba49;
     grid-area: mainContent;
     height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 60px 2fr;
     border-radius: 2px;
     overflow: hidden;
     transform: translateY(-110%);
     transition: all 0.3s ease-in-out;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: 60px 2fr;
   }
   .main .aboutMePage .content {
     margin: 10px;
@@ -185,22 +228,6 @@ body {
     text-decoration: underline;
     padding-left: 10px;
   }
-  .main .aboutMePage .content #text {
-    font-size: 1.5em;
-    font-family: "Anonymous Pro", monospace;
-    padding: 10px;
-  }
-  .main .aboutMePage #myName {
-    grid-column: 3;
-    grid-row: 3;
-    font-size: 2rem;
-    margin: 10px;
-    font-family: "Varela Round", sans-serif;
-    align-self: flex-end;
-    justify-self: flex-end;
-    color: #171d1c;
-    user-select: none;
-  }
   .main .aboutMePage img {
     justify-self: flex-end;
     align-self: flex-end;
@@ -218,9 +245,6 @@ body {
     grid-area: mainContent;
     height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 60px 2fr;
     border-radius: 2px;
     overflow: hidden;
     transform: translateY(-110%);
@@ -243,34 +267,18 @@ body {
     text-decoration: underline;
     padding-left: 10px;
   }
-  .main .portfolioPage .content #text {
-    font-size: 1.5em;
-    font-family: "Anonymous Pro", monospace;
-    padding: 10px;
-  }
-  .main .portfolioPage #myName {
-    grid-column: 3;
-    grid-row: 3;
-    font-size: 2rem;
-    margin: 10px;
-    font-family: "Varela Round", sans-serif;
-    align-self: flex-end;
-    justify-self: flex-end;
-    color: #171d1c;
-    user-select: none;
-  }
   .main .contactMePage {
     background-color: #247ba0;
     grid-area: mainContent;
     height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 60px 2fr;
     border-radius: 2px;
     overflow: hidden;
     transform: translateY(-110%);
     transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .main .contactMePage .content {
     margin: 10px;
@@ -289,21 +297,22 @@ body {
     text-decoration: underline;
     padding-left: 10px;
   }
-  .main .contactMePage .content #text {
-    font-size: 1.5em;
-    font-family: "Anonymous Pro", monospace;
-    padding: 10px;
-  }
-  .main .contactMePage #myName {
-    grid-column: 3;
-    grid-row: 3;
-    font-size: 2rem;
-    margin: 10px;
-    font-family: "Varela Round", sans-serif;
-    align-self: flex-end;
-    justify-self: flex-end;
+  .main .contactMePage #linkedInContainer .linkedIn {
     color: #171d1c;
-    user-select: none;
+    font-size: 10rem;
+    cursor: pointer;
+    transform: translate(-280%);
+  }
+  .main .contactMePage #linkedInContainer .linkedIn:hover {
+    color: #efe9f4;
+  }
+  .main .contactMePage #githubContainer #github {
+    color: #efe9f4;
+    font-size: 10rem;
+    cursor: pointer;
+  }
+  .main .contactMePage #githubContainer #github:hover {
+    color: #171d1c;
   }
   .main .listContainer {
     grid-area: menu;
@@ -312,13 +321,12 @@ body {
     margin-bottom: 10px;
   }
   .main .listContainer #menuList {
-    height: 175px;
     list-style: none;
     color: #efe9f4;
     font-family: "Varela Round", sans-serif;
     font-size: 3rem;
   }
-  .main .listContainer #menuList li {
+  .main .listContainer #menuList .menuItems {
     cursor: pointer;
     margin-left: 10px;
     transition: all 0.2s;
@@ -326,31 +334,33 @@ body {
     width: fit-content;
     border-radius: 2px;
     user-select: none;
+    transform: translate(-150%);
+    transition: transform 0.3s ease-out;
   }
-  .main .listContainer #menuList li:hover {
+  .main .listContainer #menuList .menuItems:hover {
     background-color: #efe9f4;
     color: #171d1c;
   }
-  .main .hidden {
-    display: none;
+  .main .listContainer #menuList .revealMenuItem {
+    transform: translate(0%);
+  }
+  .main .listContainer #menuList .picked0 {
+    background-color: #ffba49;
+    transform: translate(50%);
+  }
+  .main .listContainer #menuList .picked1 {
+    background-color: #b41882;
+    transform: translate(50%);
+  }
+  .main .listContainer #menuList .picked2 {
+    background-color: #247ba0;
+    transform: translate(50%);
   }
   .main .revealPage {
     transform: translateY(0%);
   }
-
-  .picked0 {
-    background-color: #f7a072;
-    transform: rotate(-10deg);
-  }
-
-  .picked1 {
-    background-color: #b41882;
-    transform: rotate(-10deg);
-  }
-
-  .picked2 {
-    background-color: #247ba0;
-    transform: rotate(-10deg);
+  .main .hidden {
+    display: none;
   }
 }
 

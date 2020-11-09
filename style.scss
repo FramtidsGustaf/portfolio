@@ -1,18 +1,14 @@
 $backgroundMenu: #171d1c;
 $textMenu: #efe9f4;
-$aboutMe: #f7a072;
+$aboutMe: #ffba49;
 $contactMe: #247ba0;
 $portfolio: #b41882;
-$landing: #ffba49;
 
 @mixin pages($color) {
   background-color: $color;
   grid-area: mainContent;
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  grid-template-rows: 60px 2fr;
   border-radius: 2px;
   overflow: hidden;
   transform: translateY(-110%);
@@ -36,24 +32,6 @@ $landing: #ffba49;
         padding-left: 10px;
       }
     }
-
-    #text {
-      font-size: 1.5em;
-      font-family: "Anonymous Pro", monospace;
-      padding: 10px;
-    }
-  }
-
-  #myName {
-    grid-column: 3;
-    grid-row: 3;
-    font-size: 2rem;
-    margin: 10px;
-    font-family: "Varela Round", sans-serif;
-    align-self: flex-end;
-    justify-self: flex-end;
-    color: $backgroundMenu;
-    user-select: none;
   }
 }
 @mixin picked($color) {
@@ -68,28 +46,13 @@ $landing: #ffba49;
   grid-template-rows: 10% 80% 10%;
   border-radius: 2px;
   overflow: hidden;
-  transition: background-color 0.5s ease-out;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-110%);
+  margin-bottom: 3%;
   .content {
     grid-column: 1/4;
     grid-row: 2;
     font-family: "Anonymous Pro", monospace;
-  }
-  img {
-    justify-self: flex-end;
-    align-self: flex-end;
-    height: 70%;
-    grid-column: 2/4;
-    grid-row: 2/4;
-  }
-  .myName {
-    grid-column: 3;
-    grid-row: 3;
-    display: flex;
-    justify-content: flex-end;
-    p {
-      font-size: 1.3rem;
-      font-family: "Varela Round", sans-serif;
-    }
   }
 }
 * {
@@ -111,8 +74,45 @@ body {
     grid-template-rows: 75vh 25vh;
     overflow: hidden;
     padding-top: 20px;
+    .startButton {
+      height: fit-content;
+      width: fit-content;
+      position: absolute;
+      padding: 10px;
+      left: 50%;
+      top: 50%;
+      border: none;
+      border-radius: 5px;
+      background-color: $textMenu;
+      color: $backgroundMenu;
+      font-family: "Varela Round", sans-serif;
+      font-size: 150%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .buttonDisapear {
+      animation-name: buttonDisapear;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    @keyframes buttonDisapear {
+      100% {
+        transform: translate(-50%, -100vh);
+      }
+    }
     .aboutMePage {
       @include pagesMobile($aboutMe);
+      img {
+        justify-self: flex-end;
+        align-self: flex-end;
+        height: 70%;
+        grid-column: 2/4;
+        grid-row: 2/4;
+      }
     }
     .portfolioPage {
       @include pagesMobile($portfolio);
@@ -124,26 +124,43 @@ body {
       grid-column: 2;
       grid-row: 2;
       width: 100%;
-      color: $textMenu;
-
-      ul {
+      #menuList {
+        color: $textMenu;
+        font-family: "Varela Round", sans-serif;
+        font-size: 2.5rem;
         list-style: none;
-        li {
-          font-family: "Varela Round", sans-serif;
-          font-size: 2.5rem;
+
+        .menuItems {
           transition: background-color 0.2s;
           width: fit-content;
           border-radius: 2px;
+          user-select: none;
+          transform: translate(-150%);
+          transition: transform 0.2s ease-out;
+        }
+        .revealMenuItem {
+          transform: translate(0%);
+        }
+        .picked0 {
+          @include picked($aboutMe);
+          transform: rotate(180deg);
+        }
+        .picked1 {
+          @include picked($portfolio);
+          transform: rotate(180deg);
+        }
+        .picked2 {
+          @include picked($contactMe);
+          transform: rotate(180deg);
         }
       }
+    }
+    .revealPage {
+      transform: translate(0%);
     }
   }
   .hidden {
     display: none;
-  }
-  .picked0 {
-    @include picked($aboutMe);
-    transform: translate(10deg);
   }
 }
 @media screen and (min-width: 992px) {
@@ -159,9 +176,47 @@ body {
       ". mainContent mainContent"
       "menu mainContent mainContent";
 
+    .startButton {
+      height: fit-content;
+      width: fit-content;
+      position: absolute;
+      padding: 10px;
+      left: 50%;
+      top: 50%;
+      border: none;
+      border-radius: 5px;
+      background-color: $textMenu;
+      color: $backgroundMenu;
+      font-family: "Varela Round", sans-serif;
+      font-size: 150%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        background-color: $backgroundMenu;
+        color: $textMenu;
+        border: solid 2px $textMenu;
+      }
+    }
+    .buttonDisapear {
+      animation-name: buttonDisapear;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    @keyframes buttonDisapear {
+      100% {
+        transform: translate(-50%, -100vh);
+      }
+    }
     .aboutMePage {
       @include pages($aboutMe);
-
+      display: grid;
+      grid-template-columns: repeat(3, 33%);
+      grid-template-rows: 60px 2fr;
       img {
         justify-self: flex-end;
         align-self: flex-end;
@@ -180,6 +235,30 @@ body {
     }
     .contactMePage {
       @include pages($contactMe);
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      #linkedInContainer {
+        .linkedIn {
+          color: $backgroundMenu;
+          font-size: 10rem;
+          cursor: pointer;
+          transform: translate(-280%);
+          &:hover {
+            color: $textMenu;
+          }
+        }
+      }
+      #githubContainer {
+        #github {
+          color: $textMenu;
+          font-size: 10rem;
+          cursor: pointer;
+          &:hover {
+            color: $backgroundMenu;
+          }
+        }
+      }
     }
 
     .listContainer {
@@ -188,12 +267,11 @@ body {
       align-items: flex-end;
       margin-bottom: 10px;
       #menuList {
-        height: 175px;
         list-style: none;
         color: $textMenu;
         font-family: "Varela Round", sans-serif;
         font-size: 3rem;
-        li {
+        .menuItems {
           cursor: pointer;
           margin-left: 10px;
           transition: all 0.2s;
@@ -201,30 +279,38 @@ body {
           width: fit-content;
           border-radius: 2px;
           user-select: none;
+          transform: translate(-150%);
+          transition: transform 0.3s ease-out;
           &:hover {
             background-color: $textMenu;
             color: $backgroundMenu;
           }
         }
+        .revealMenuItem {
+          transform: translate(0%);
+        }
+        .picked0 {
+          @include picked($aboutMe);
+          //transform: rotate(-5deg);
+          transform: translate(50%);
+        }
+        .picked1 {
+          @include picked($portfolio);
+          //transform: rotate(-5deg);
+          transform: translate(50%);
+        }
+        .picked2 {
+          @include picked($contactMe);
+          //transform: rotate(-5deg);
+          transform: translate(50%);
+        }
       }
-    }
-    .hidden {
-      display: none;
     }
     .revealPage {
       transform: translateY(0%);
     }
-  }
-  .picked0 {
-    @include picked($aboutMe);
-    transform: rotate(-10deg);
-  }
-  .picked1 {
-    @include picked($portfolio);
-    transform: rotate(-10deg);
-  }
-  .picked2 {
-    @include picked($contactMe);
-    transform: rotate(-10deg);
+    .hidden {
+      display: none;
+    }
   }
 }
