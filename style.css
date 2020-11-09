@@ -79,7 +79,6 @@ body {
     width: 100%;
     background-color: #171d1c;
     display: grid;
-    transition: all 0.5s ease-out;
     grid-template-columns: repeat(3, 1fr);
   }
   .main .mainContent {
@@ -91,13 +90,29 @@ body {
     grid-template-rows: 60px 2fr;
     border-radius: 2px;
     overflow: hidden;
-    transition: all 0.2s ease-out;
+    transition: all 0.5s ease-out;
   }
   .main .mainContent .content {
     margin: 10px;
     grid-column: 1/4;
-    grid-row: 2;
+    grid-row: 1/3;
+  }
+  .main .mainContent .content #aboutMeTitle {
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    color: #171d1c;
+  }
+  .main .mainContent .content #aboutMeTitle h1 {
+    font-size: 4rem;
+    font-family: "Varela Round", sans-serif;
+    text-decoration: underline;
+    padding-left: 10px;
+  }
+  .main .mainContent .content #aboutMeText {
+    font-size: 1.5em;
     font-family: "Anonymous Pro", monospace;
+    padding: 10px;
   }
   .main .mainContent img {
     justify-self: flex-end;
@@ -105,6 +120,11 @@ body {
     height: 70%;
     grid-column: 2/4;
     grid-row: 2/4;
+    transform: translateY(70%);
+    transition: all 1s ease-in-out;
+  }
+  .main .mainContent img:hover {
+    transform: translateY(2%);
   }
   .main .mainContent #myName {
     grid-column: 3;
@@ -149,10 +169,6 @@ body {
 
   .gTABefore {
     grid-template-areas: ". mainContent mainContent" ". mainContent mainContent" "menu mainContent mainContent";
-  }
-
-  .gTAAfter {
-    grid-template-areas: "mainContent mainContent ." "mainContent mainContent ." "mainContent mainContent .";
   }
 }
 .landing {
