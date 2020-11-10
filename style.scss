@@ -152,6 +152,8 @@ body {
     grid-template-rows: 75vh 25vh;
     overflow: hidden;
     padding-top: 5%;
+
+    /*------------------Landing Page start----------------------------------*/
     .landingText {
       width: fit-content;
       font-family: "Varela Round", sans-serif;
@@ -186,6 +188,8 @@ body {
         transform: translate(-50%, -100vh);
       }
     }
+    /*------------------------------------landing Page end-------------------------------------*/
+    /*-----------------------------------About Me Page start-----------------------------------*/
     .aboutMePage {
       @include pagesMobile($aboutMe);
       img {
@@ -197,6 +201,8 @@ body {
         display: none;
       }
     }
+    /*----------------------------------About Me Page end----------------------------------------*/
+    /*----------------------------------Portfolio Page start-------------------------------------*/
     .portfolioPage {
       @include pagesMobile($portfolio);
       display: grid;
@@ -235,6 +241,8 @@ body {
         transform: translateY(300%);
       }
     }
+    /*-----------------------------------Portfolio Page end----------------------------------------*/
+    /*-----------------------------------Contact Me Page start--------------------------------------*/
     .contactMePage {
       @include pagesMobile($contactMe);
       display: flex;
@@ -258,6 +266,8 @@ body {
         }
       }
     }
+    /*---------------------------------Contact Me end---------------------------------------------------*/
+    /*-----------------------------Navigation Menu start------------------------------------------------*/
     .listContainer {
       grid-column: 2;
       grid-row: 2;
@@ -283,6 +293,7 @@ body {
         }
       }
     }
+    /*---------------------------Navigation Menu end--------------------------------------------------------*/
     .revealPage {
       transform: translate(0%);
     }
@@ -350,6 +361,7 @@ body {
       grid-template-rows: 1fr 70% 1fr;
       font-family: "Varela Round", sans-serif;
       padding: 2%;
+      color: $backgroundMenu;
       .title {
         grid-column: 1/4;
         grid-row: 1;
