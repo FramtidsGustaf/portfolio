@@ -6,10 +6,16 @@ class Main {
   landingPage() {
     const startButton = document.querySelector(".startButton");
     const menuItems = document.querySelectorAll(".menuItems");
+    const landingText = document.querySelector(".landingText");
     let i = 0;
     startButton.addEventListener("click", () => {
-      startButton.classList.add("buttonDisapear");
+      landingText.classList.add("hideLandingText");
       setTimeout(() => {
+        startButton.classList.add("buttonDisapear");
+      }, 100);
+
+      setTimeout(() => {
+        landingText.remove();
         startButton.remove();
       }, 1000);
       const revealMenu = () => {
@@ -24,9 +30,9 @@ class Main {
     });
   }
   menuPick() {
-    const contentPages = document.getElementsByClassName("contentPages");
-    const menuItems = document.getElementsByClassName("menuItems");
-    const listContainer = document.getElementsByClassName("listContainer")[0];
+    const contentPages = document.querySelectorAll(".contentPages");
+    const menuItems = document.querySelectorAll(".menuItems");
+    const listContainer = document.querySelector(".listContainer");
     const linkedInIcon = document.querySelector(".linkedIn");
     const githubIcon = document.querySelector(".github");
     listContainer.addEventListener("click", (e) => {

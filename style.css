@@ -10,6 +10,7 @@ body {
   overflow: hidden;
 }
 
+/*---------------For decvices smaller than 992px in widht------------------*/
 @media screen and (max-width: 992px) {
   .main {
     height: 100vh;
@@ -18,7 +19,21 @@ body {
     grid-template-columns: 5vw 90vw 5vw;
     grid-template-rows: 75vh 25vh;
     overflow: hidden;
-    padding-top: 20px;
+    padding-top: 5%;
+  }
+  .main .landingText {
+    width: fit-content;
+    font-family: "Varela Round", sans-serif;
+    font-size: 140%;
+    color: #efe9f4;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%);
+    transition: all 0.4s;
+  }
+  .main .hideLandingText {
+    left: 150%;
   }
   .main .startButton {
     height: fit-content;
@@ -54,9 +69,6 @@ body {
     background-color: #ffba49;
     grid-column: 2;
     grid-row: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 10% 80% 10%;
     border-radius: 2px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
@@ -79,9 +91,6 @@ body {
     background-color: #b41882;
     grid-column: 2;
     grid-row: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 10% 80% 10%;
     border-radius: 2px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
@@ -97,24 +106,41 @@ body {
     background-color: #247ba0;
     grid-column: 2;
     grid-row: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 10% 80% 10%;
     border-radius: 2px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     transform: translateY(-110%);
     margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .main .contactMePage .content {
     grid-column: 1/4;
     grid-row: 2;
     font-family: "Anonymous Pro", monospace;
   }
+  .main .contactMePage #linkedInContainer .linkedIn {
+    color: #171d1c;
+    font-size: 10rem;
+    transition: transform 0.3s ease-out;
+    transform: translate(-1000%);
+  }
+  .main .contactMePage #linkedInContainer .revealIcon {
+    transform: translate(0%);
+  }
+  .main .contactMePage #githubContainer .github {
+    color: #efe9f4;
+    font-size: 10rem;
+    transition: transform 0.3s ease-out;
+    transform: translate(1000%);
+  }
+  .main .contactMePage #githubContainer .revealIcon {
+    transform: translate(0%);
+  }
   .main .listContainer {
     grid-column: 2;
     grid-row: 2;
-    width: 100%;
   }
   .main .listContainer #menuList {
     color: #efe9f4;
@@ -123,12 +149,11 @@ body {
     list-style: none;
   }
   .main .listContainer #menuList .menuItems {
-    transition: background-color 0.2s;
     width: fit-content;
     border-radius: 2px;
     user-select: none;
     transform: translate(-150%);
-    transition: transform 0.2s ease-out;
+    transition: transform 0.3s ease-out;
   }
   .main .listContainer #menuList .revealMenuItem {
     transform: translate(0%);
@@ -148,11 +173,8 @@ body {
   .main .revealPage {
     transform: translate(0%);
   }
-
-  .hidden {
-    display: none;
-  }
 }
+/*-----------------------for devices larger than 992px------------------------*/
 @media screen and (min-width: 992px) {
   .main {
     padding: 1.5%;
@@ -162,6 +184,20 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: ". mainContent mainContent" ". mainContent mainContent" "menu mainContent mainContent";
+  }
+  .main .landingText {
+    width: fit-content;
+    font-family: "Varela Round", sans-serif;
+    color: #efe9f4;
+    font-size: 300%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+    transition: all 0.4s;
+  }
+  .main .hideLandingText {
+    left: 150%;
   }
   .main .startButton {
     height: fit-content;
@@ -300,9 +336,9 @@ body {
   .main .contactMePage #linkedInContainer .linkedIn {
     color: #171d1c;
     font-size: 10rem;
-    cursor: pointer;
     transition: transform 0.3s ease-out;
     transform: translate(-1000%);
+    cursor: pointer;
   }
   .main .contactMePage #linkedInContainer .linkedIn:hover {
     color: #efe9f4;
@@ -313,9 +349,9 @@ body {
   .main .contactMePage #githubContainer .github {
     color: #efe9f4;
     font-size: 10rem;
-    cursor: pointer;
     transition: transform 0.3s ease-out;
     transform: translate(1000%);
+    cursor: pointer;
   }
   .main .contactMePage #githubContainer .github:hover {
     color: #171d1c;
@@ -330,21 +366,20 @@ body {
     margin-bottom: 10px;
   }
   .main .listContainer #menuList {
-    list-style: none;
     color: #efe9f4;
     font-family: "Varela Round", sans-serif;
     font-size: 3rem;
+    list-style: none;
   }
   .main .listContainer #menuList .menuItems {
-    cursor: pointer;
-    margin-left: 10px;
-    transition: all 0.2s;
-    padding: 2px;
     width: fit-content;
     border-radius: 2px;
     user-select: none;
     transform: translate(-150%);
     transition: transform 0.3s ease-out;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 2px;
   }
   .main .listContainer #menuList .menuItems:hover {
     background-color: #efe9f4;
@@ -367,9 +402,6 @@ body {
   }
   .main .revealPage {
     transform: translateY(0%);
-  }
-  .main .hidden {
-    display: none;
   }
 }
 
