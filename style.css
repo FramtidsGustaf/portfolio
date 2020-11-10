@@ -88,7 +88,7 @@ body {
     grid-row: 2/4;
   }
   .main .portfolioPage {
-    background-color: #b41882;
+    background-color: #bff0a3;
     grid-column: 2;
     grid-row: 1;
     border-radius: 2px;
@@ -103,7 +103,7 @@ body {
     font-family: "Anonymous Pro", monospace;
   }
   .main .contactMePage {
-    background-color: #247ba0;
+    background-color: #ff8b8b;
     grid-column: 2;
     grid-row: 1;
     border-radius: 2px;
@@ -130,7 +130,7 @@ body {
     transform: translate(0%);
   }
   .main .contactMePage #githubContainer .github {
-    color: #efe9f4;
+    color: #171d1c;
     font-size: 10rem;
     transition: transform 0.3s ease-out;
     transform: translate(1000%);
@@ -160,14 +160,17 @@ body {
   }
   .main .listContainer #menuList .picked0 {
     background-color: #ffba49;
+    color: #171d1c;
     transform: rotate(180deg);
   }
   .main .listContainer #menuList .picked1 {
-    background-color: #b41882;
+    background-color: #bff0a3;
+    color: #171d1c;
     transform: rotate(180deg);
   }
   .main .listContainer #menuList .picked2 {
-    background-color: #247ba0;
+    background-color: #ff8b8b;
+    color: #171d1c;
     transform: rotate(180deg);
   }
   .main .revealPage {
@@ -277,7 +280,7 @@ body {
     transform: translateY(2%);
   }
   .main .portfolioPage {
-    background-color: #b41882;
+    background-color: #bff0a3;
     grid-area: mainContent;
     height: 100%;
     width: 100%;
@@ -304,7 +307,7 @@ body {
     padding-left: 10px;
   }
   .main .contactMePage {
-    background-color: #247ba0;
+    background-color: #ff8b8b;
     grid-area: mainContent;
     height: 100%;
     width: 100%;
@@ -347,14 +350,14 @@ body {
     transform: translate(0%);
   }
   .main .contactMePage #githubContainer .github {
-    color: #efe9f4;
+    color: #171d1c;
     font-size: 10rem;
     transition: transform 0.3s ease-out;
     transform: translate(1000%);
     cursor: pointer;
   }
   .main .contactMePage #githubContainer .github:hover {
-    color: #171d1c;
+    color: #efe9f4;
   }
   .main .contactMePage #githubContainer .revealIcon {
     transform: translate(0%);
@@ -390,14 +393,17 @@ body {
   }
   .main .listContainer #menuList .picked0 {
     background-color: #ffba49;
+    color: #171d1c;
     transform: rotate(-5deg);
   }
   .main .listContainer #menuList .picked1 {
-    background-color: #b41882;
+    background-color: #bff0a3;
+    color: #171d1c;
     transform: rotate(-5deg);
   }
   .main .listContainer #menuList .picked2 {
-    background-color: #247ba0;
+    background-color: #ff8b8b;
+    color: #171d1c;
     transform: rotate(-5deg);
   }
   .main .revealPage {

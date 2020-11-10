@@ -1,8 +1,9 @@
 $backgroundMenu: #171d1c;
 $textMenu: #efe9f4;
 $aboutMe: #ffba49;
-$contactMe: #247ba0;
-$portfolio: #b41882;
+// $contactMe: #247ba0;
+$contactMe: #ff8b8b;
+$portfolio: #bff0a3;
 
 @mixin pages($color) {
   background-color: $color;
@@ -36,6 +37,7 @@ $portfolio: #b41882;
 }
 @mixin picked($color) {
   background-color: $color;
+  color: $backgroundMenu;
 }
 @mixin pagesMobile($color) {
   background-color: $color;
@@ -181,7 +183,7 @@ body {
       }
       #githubContainer {
         .github {
-          @include contactMeMobile(1000%, $textMenu);
+          @include contactMeMobile(1000%, $backgroundMenu);
         }
         .revealIcon {
           transform: translate(0%);
@@ -299,7 +301,7 @@ body {
       }
       #githubContainer {
         .github {
-          @include contacMeDesktop(1000%, $textMenu, $backgroundMenu);
+          @include contacMeDesktop(1000%, $backgroundMenu, $textMenu);
         }
         .revealIcon {
           transform: translate(0%);
