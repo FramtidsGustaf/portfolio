@@ -13,26 +13,6 @@ $portfolio: #bff0a3;
   overflow: hidden;
   transform: translateY(-110%);
   transition: all 0.3s ease-in-out;
-
-  .content {
-    margin: 10px;
-    grid-column: 1/4;
-    grid-row: 1/3;
-
-    #title {
-      height: fit-content;
-      width: fit-content;
-      text-align: center;
-      color: $backgroundMenu;
-
-      h1 {
-        font-size: 4rem;
-        font-family: "Varela Round", sans-serif;
-        text-decoration: underline;
-        padding-left: 10px;
-      }
-    }
-  }
 }
 @mixin picked($color) {
   background-color: $color;
@@ -163,6 +143,7 @@ body {
         height: 70%;
         grid-column: 2/4;
         grid-row: 2/4;
+        display: none;
       }
     }
     .portfolioPage {
@@ -270,7 +251,49 @@ body {
       @include pages($aboutMe);
       display: grid;
       grid-template-columns: repeat(3, 33%);
-      grid-template-rows: 60px 2fr;
+      grid-template-rows: 1fr 70% 1fr;
+      font-family: "Varela Round", sans-serif;
+      padding: 2%;
+      .title {
+        grid-column: 1/4;
+        grid-row: 1;
+        width: fit-content;
+        h1 {
+          font-size: 4rem;
+        }
+        h2 {
+          text-align: center;
+        }
+      }
+      #card {
+        margin: 2%;
+        padding: 1%;
+        background-color: rgba($color: $textMenu, $alpha: 0.2);
+        border-radius: 3px;
+        grid-column: 1/4;
+        grid-row: 2;
+        ul {
+          list-style: none;
+        }
+      }
+      #icons {
+        grid-column: 1/3;
+        grid-row: 3;
+        align-items: flex-end;
+        justify-content: space-around;
+        display: flex;
+      }
+      .skillIcons {
+        transition: all 0.2s ease-in-out;
+        font-size: 4rem;
+        color: $backgroundMenu;
+        &:hover {
+          color: $textMenu;
+          transform: scale(1.2);
+          text-shadow: 1px 1px 1px $backgroundMenu;
+        }
+      }
+
       img {
         justify-self: flex-end;
         align-self: flex-end;
@@ -280,12 +303,35 @@ body {
         transform: translateY(70%);
         transition: all 1s ease-in-out;
         &:hover {
-          transform: translateY(2%);
+          transform: translateY(10%);
         }
       }
     }
     .portfolioPage {
       @include pages($portfolio);
+      display: grid;
+      grid-template-columns: 5% 45% 45% 5%;
+      grid-template-rows: 5% 90% 5%;
+      #bobblePupper {
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 19rem;
+        }
+      }
+      #quiz {
+        grid-column: 3;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 20rem;
+        }
+      }
     }
     .contactMePage {
       @include pages($contactMe);

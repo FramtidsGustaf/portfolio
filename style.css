@@ -86,6 +86,7 @@ body {
     height: 70%;
     grid-column: 2/4;
     grid-row: 2/4;
+    display: none;
   }
   .main .portfolioPage {
     background-color: #bff0a3;
@@ -248,24 +249,48 @@ body {
     transition: all 0.3s ease-in-out;
     display: grid;
     grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 60px 2fr;
+    grid-template-rows: 1fr 70% 1fr;
+    font-family: "Varela Round", sans-serif;
+    padding: 2%;
   }
-  .main .aboutMePage .content {
-    margin: 10px;
+  .main .aboutMePage .title {
     grid-column: 1/4;
-    grid-row: 1/3;
-  }
-  .main .aboutMePage .content #title {
-    height: fit-content;
+    grid-row: 1;
     width: fit-content;
+  }
+  .main .aboutMePage .title h1 {
+    font-size: 4rem;
+  }
+  .main .aboutMePage .title h2 {
     text-align: center;
+  }
+  .main .aboutMePage #card {
+    margin: 2%;
+    padding: 1%;
+    background-color: rgba(239, 233, 244, 0.2);
+    border-radius: 3px;
+    grid-column: 1/4;
+    grid-row: 2;
+  }
+  .main .aboutMePage #card ul {
+    list-style: none;
+  }
+  .main .aboutMePage #icons {
+    grid-column: 1/3;
+    grid-row: 3;
+    align-items: flex-end;
+    justify-content: space-around;
+    display: flex;
+  }
+  .main .aboutMePage .skillIcons {
+    transition: all 0.2s ease-in-out;
+    font-size: 4rem;
     color: #171d1c;
   }
-  .main .aboutMePage .content #title h1 {
-    font-size: 4rem;
-    font-family: "Varela Round", sans-serif;
-    text-decoration: underline;
-    padding-left: 10px;
+  .main .aboutMePage .skillIcons:hover {
+    color: #efe9f4;
+    transform: scale(1.2);
+    text-shadow: 1px 1px 1px #171d1c;
   }
   .main .aboutMePage img {
     justify-self: flex-end;
@@ -277,7 +302,7 @@ body {
     transition: all 1s ease-in-out;
   }
   .main .aboutMePage img:hover {
-    transform: translateY(2%);
+    transform: translateY(10%);
   }
   .main .portfolioPage {
     background-color: #bff0a3;
@@ -288,23 +313,29 @@ body {
     overflow: hidden;
     transform: translateY(-110%);
     transition: all 0.3s ease-in-out;
+    display: grid;
+    grid-template-columns: 5% 45% 45% 5%;
+    grid-template-rows: 5% 90% 5%;
   }
-  .main .portfolioPage .content {
-    margin: 10px;
-    grid-column: 1/4;
-    grid-row: 1/3;
+  .main .portfolioPage #bobblePupper {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .main .portfolioPage .content #title {
-    height: fit-content;
-    width: fit-content;
-    text-align: center;
-    color: #171d1c;
+  .main .portfolioPage #bobblePupper img {
+    height: 19rem;
   }
-  .main .portfolioPage .content #title h1 {
-    font-size: 4rem;
-    font-family: "Varela Round", sans-serif;
-    text-decoration: underline;
-    padding-left: 10px;
+  .main .portfolioPage #quiz {
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .portfolioPage #quiz img {
+    height: 20rem;
   }
   .main .contactMePage {
     background-color: #ff8b8b;
@@ -318,23 +349,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-  }
-  .main .contactMePage .content {
-    margin: 10px;
-    grid-column: 1/4;
-    grid-row: 1/3;
-  }
-  .main .contactMePage .content #title {
-    height: fit-content;
-    width: fit-content;
-    text-align: center;
-    color: #171d1c;
-  }
-  .main .contactMePage .content #title h1 {
-    font-size: 4rem;
-    font-family: "Varela Round", sans-serif;
-    text-decoration: underline;
-    padding-left: 10px;
   }
   .main .contactMePage #linkedInContainer .linkedIn {
     color: #171d1c;
