@@ -24,11 +24,11 @@ body {
   .main .landingText {
     width: fit-content;
     font-family: "Varela Round", sans-serif;
-    font-size: 140%;
+    font-size: 90%;
     color: #efe9f4;
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 30%;
     transform: translate(-50%);
     transition: all 0.4s;
   }
@@ -345,6 +345,8 @@ body {
   }
   .main .contactMePage #linkedInContainer .linkedIn:hover {
     color: #efe9f4;
+    text-shadow: 2px 2px 4px #171d1c;
+    transform: scale(1.4);
   }
   .main .contactMePage #linkedInContainer .revealIcon {
     transform: translate(0%);
@@ -358,6 +360,8 @@ body {
   }
   .main .contactMePage #githubContainer .github:hover {
     color: #efe9f4;
+    text-shadow: 2px 2px 4px #171d1c;
+    transform: scale(1.4);
   }
   .main .contactMePage #githubContainer .revealIcon {
     transform: translate(0%);

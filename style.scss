@@ -1,7 +1,6 @@
 $backgroundMenu: #171d1c;
 $textMenu: #efe9f4;
 $aboutMe: #ffba49;
-// $contactMe: #247ba0;
 $contactMe: #ff8b8b;
 $portfolio: #bff0a3;
 
@@ -68,6 +67,8 @@ $portfolio: #bff0a3;
   cursor: pointer;
   &:hover {
     color: $hoverColor;
+    text-shadow: 2px 2px 4px $backgroundMenu;
+    transform: scale(1.4);
   }
 }
 @mixin startButton {
@@ -132,11 +133,11 @@ body {
     .landingText {
       width: fit-content;
       font-family: "Varela Round", sans-serif;
-      font-size: 100%;
+      font-size: 90%;
       color: $textMenu;
       position: absolute;
       left: 50%;
-      top: 40%;
+      top: 30%;
       transform: translate(-50%);
       transition: all 0.4s;
     }
