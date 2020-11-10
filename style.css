@@ -24,7 +24,7 @@ body {
   .main .landingText {
     width: fit-content;
     font-family: "Varela Round", sans-serif;
-    font-size: 90%;
+    font-size: 100%;
     color: #efe9f4;
     position: absolute;
     left: 50%;
@@ -32,8 +32,26 @@ body {
     transform: translate(-50%);
     transition: all 0.4s;
   }
+  .main .landingText span {
+    color: #ffba49;
+  }
   .main .hideLandingText {
     left: 150%;
+  }
+  .main .hi {
+    width: fit-content;
+    font-family: "Varela Round", sans-serif;
+    color: #ffba49;
+    font-size: 1000%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease-in-out;
+    user-select: none;
+  }
+  .main .hideHi {
+    color: transparent;
   }
   .main .startButton {
     height: fit-content;
@@ -54,6 +72,7 @@ body {
     align-items: center;
     cursor: pointer;
     user-select: none;
+    z-index: 1;
   }
   .main .buttonDisapear {
     animation-name: buttonDisapear;
@@ -97,11 +116,75 @@ body {
     transition: all 0.3s ease-in-out;
     transform: translateY(-110%);
     margin-bottom: 3%;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 45% 45% 5%;
   }
   .main .portfolioPage .content {
     grid-column: 1/4;
     grid-row: 2;
     font-family: "Anonymous Pro", monospace;
+  }
+  .main .portfolioPage #bobblePupper {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    height: 90%;
+    width: 80%;
+    background-color: #fb4d3d;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+  }
+  .main .portfolioPage #bobblePupper a:link {
+    text-decoration: none;
+  }
+  .main .portfolioPage #bobblePupper h3 {
+    font-size: 9vw;
+    font-family: "Fredoka One", cursive;
+    color: #eac435;
+    user-select: none;
+    text-shadow: 1vw 1vw #0e0e11;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .portfolioPage .hideBobblePupper {
+    transform: translateY(-300%);
+  }
+  .main .portfolioPage #quiz {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+    height: 90%;
+    width: 80%;
+    background-color: #212121;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+  }
+  .main .portfolioPage #quiz a:link {
+    text-decoration: none;
+  }
+  .main .portfolioPage #quiz h3 {
+    font-family: "PT Mono", monospace;
+    font-size: 9vw;
+    color: #7bddf1;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .portfolioPage #quiz h3 #quizWord {
+    color: #ffbe45;
+  }
+  .main .portfolioPage #quiz h3 #parentheses {
+    color: #f0715c;
+  }
+  .main .portfolioPage .hideQuiz {
+    transform: translateY(300%);
   }
   .main .contactMePage {
     background-color: #ff8b8b;
@@ -124,7 +207,7 @@ body {
   .main .contactMePage #linkedInContainer .linkedIn {
     color: #171d1c;
     font-size: 10rem;
-    transition: transform 0.3s ease-out;
+    transition: all 0.3s ease-out;
     transform: translate(-1000%);
   }
   .main .contactMePage #linkedInContainer .revealIcon {
@@ -133,7 +216,7 @@ body {
   .main .contactMePage #githubContainer .github {
     color: #171d1c;
     font-size: 10rem;
-    transition: transform 0.3s ease-out;
+    transition: all 0.3s ease-out;
     transform: translate(1000%);
   }
   .main .contactMePage #githubContainer .revealIcon {
@@ -193,15 +276,34 @@ body {
     width: fit-content;
     font-family: "Varela Round", sans-serif;
     color: #efe9f4;
-    font-size: 300%;
+    font-size: 350%;
     position: absolute;
     left: 50%;
     top: 20%;
     transform: translate(-50%);
     transition: all 0.4s;
+    user-select: none;
+  }
+  .main .landingText span {
+    color: #ffba49;
   }
   .main .hideLandingText {
     left: 150%;
+  }
+  .main .hi {
+    width: fit-content;
+    font-family: "Varela Round", sans-serif;
+    color: #ffba49;
+    font-size: 1000%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease-in-out;
+    user-select: none;
+  }
+  .main .hideHi {
+    color: transparent;
   }
   .main .startButton {
     height: fit-content;
@@ -222,6 +324,7 @@ body {
     align-items: center;
     cursor: pointer;
     user-select: none;
+    z-index: 1;
   }
   .main .startButton:hover {
     background-color: #171d1c;
@@ -314,28 +417,76 @@ body {
     transform: translateY(-110%);
     transition: all 0.3s ease-in-out;
     display: grid;
-    grid-template-columns: 5% 45% 45% 5%;
-    grid-template-rows: 5% 90% 5%;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 45% 45% 5%;
   }
   .main .portfolioPage #bobblePupper {
     grid-column: 2;
     grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    height: 90%;
+    width: 80%;
+    background-color: #fb4d3d;
+    border-radius: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease-out;
+    box-shadow: 3px 3px 3px #171d1c;
   }
-  .main .portfolioPage #bobblePupper img {
-    height: 19rem;
+  .main .portfolioPage #bobblePupper a:link {
+    text-decoration: none;
+  }
+  .main .portfolioPage #bobblePupper .bobblePupperLogo {
+    font-size: 6vw;
+    font-family: "Fredoka One", cursive;
+    color: #eac435;
+    user-select: none;
+    text-shadow: 0.3vw 0.3vw #0e0e11;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .portfolioPage #bobblePupper .bobblePupperLogo:hover {
+    transform: scale(1.2);
+  }
+  .main .portfolioPage .hideBobblePupper {
+    transform: translateY(-300%);
   }
   .main .portfolioPage #quiz {
-    grid-column: 3;
-    grid-row: 2;
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+    height: 90%;
+    width: 80%;
+    background-color: #212121;
+    border-radius: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease-out;
   }
-  .main .portfolioPage #quiz img {
-    height: 20rem;
+  .main .portfolioPage #quiz a:link {
+    text-decoration: none;
+  }
+  .main .portfolioPage #quiz .quizLogo {
+    font-family: "PT Mono", monospace;
+    font-size: 6vw;
+    color: #7bddf1;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .portfolioPage #quiz .quizLogo #quizWord {
+    color: #ffbe45;
+  }
+  .main .portfolioPage #quiz .quizLogo #parentheses {
+    color: #f0715c;
+  }
+  .main .portfolioPage #quiz .quizLogo:hover {
+    transform: scale(1.2);
+  }
+  .main .portfolioPage .hideQuiz {
+    transform: translateY(300%);
   }
   .main .contactMePage {
     background-color: #ff8b8b;
@@ -353,7 +504,7 @@ body {
   .main .contactMePage #linkedInContainer .linkedIn {
     color: #171d1c;
     font-size: 10rem;
-    transition: transform 0.3s ease-out;
+    transition: all 0.3s ease-out;
     transform: translate(-1000%);
     cursor: pointer;
   }
@@ -368,7 +519,7 @@ body {
   .main .contactMePage #githubContainer .github {
     color: #171d1c;
     font-size: 10rem;
-    transition: transform 0.3s ease-out;
+    transition: all 0.3s ease-out;
     transform: translate(1000%);
     cursor: pointer;
   }
