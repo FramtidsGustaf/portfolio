@@ -37,12 +37,15 @@ class AboutMe {
       addHidden(educationArray);
       addHidden(meArray);
 
+      //if user press the "skills" button
       if (e.target === buttons[0]) {
         removeHidden(skillArray);
       }
+      //if user press the "education" button
       if (e.target === buttons[1]) {
         removeHidden(educationArray);
       }
+      //if user press the "Gustaf" button
       if (e.target === buttons[2]) {
         removeHidden(meArray);
       }

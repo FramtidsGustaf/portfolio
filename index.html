@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inconsolata&family=PT+Mono&family=Varela+Round&display=swap"
       rel="stylesheet"
@@ -33,23 +33,25 @@
           <h3 class="titleAcquiered hidden">Acquiered Skills</h3>
           <div class="acquieredSkills hidden">
             <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript"
-              ><i class="fab fa-js skillIcons"></i
+              ><i class="fab fa-js skillIcons" title="Javascript logo"></i
             ></a>
             <a target="_blank" href="https://www.w3.org/TR/2017/REC-html52-20171214/"
-              ><i class="fab fa-html5 skillIcons"></i
+              ><i class="fab fa-html5 skillIcons" title="Html5 logo"></i
             ></a>
             <a target="_blank" href="https://www.w3.org/standards/webdesign/htmlcss.html#whatcss"
-              ><i class="fab fa-css3-alt skillIcons"></i
+              ><i class="fab fa-css3-alt skillIcons" title="Css3 logo"></i
             ></a>
             <a target="_blank" href="https://sass-lang.com/"
-              ><i class="fab fa-sass skillIcons"></i
+              ><i class="fab fa-sass skillIcons" title="Sass logo"></i
             ></a>
           </div>
           <h3 class="titleNotAcquiered hidden">Skills Yet To Acquier</h3>
           <div class="skillsToAcquier hidden">
-            <a target="_blank" href="https://www.php.net/"><i class="fab fa-php skillIcons"></i></a>
+            <a target="_blank" href="https://www.php.net/"
+              ><i class="fab fa-php skillIcons" title="Php logo"></i
+            ></a>
             <a target="_blank" href="https://nodejs.org/en/"
-              ><i class="fab fa-node skillIcons"></i
+              ><i class="fab fa-node skillIcons" title="Node.js logo"></i
             ></a>
             <a
               class="etc"
@@ -58,10 +60,9 @@
               >etc...</a
             >
           </div>
-          <!--The skills part stops here-->
           <!--The info about the education starts here-->
           <a target="_blank" href="https://nackademin.se/" class="nackademin hidden"
-            ><img src="images/nackademin.png" alt="nackademins logotype" class="logo"
+            ><img src="images/nackademin.png" alt="Nackademins logo" class="logo"
           /></a>
           <h3 class="educationTitle hidden">Web developer fullstack open source</h3>
           <ul class="educationList hidden">
@@ -71,7 +72,6 @@
             <li>Teachers are experienced developers</li>
             <li>Oriented towards opens source solutions</li>
           </ul>
-          <!--The info about the education stops here-->
           <!--The info about me starts here-->
           <div class="textContainer">
             <h2 class="hiAboutMe hidden">Hi!</h2>
@@ -87,7 +87,7 @@
         </div>
         <img
           src="images/gustafmedvovvar.png"
-          alt="an awesome picture of me and two puppies"
+          alt="An awesome picture of me and two puppies"
           class="puppiePicture hidden"
         />
       </section>
@@ -110,15 +110,16 @@
       <div class="contentPages contactMePage">
         <div id="linkedInContainer">
           <a target="_blank" href="https://www.linkedin.com/in/gustaf-johnsson-814664134/"
-            ><i class="fab fa-linkedin linkedIn" alt="The linkedIn icon"></i
+            ><i class="fab fa-linkedin linkedIn" title="The linkedIn logo"></i
           ></a>
         </div>
         <div id="githubContainer">
           <a target="_blank" href="https://github.com/Gustafbrun"
-            ><i class="fab fa-github-square github" alt="The github icon"></i
+            ><i class="fab fa-github-square github" title="The github logo"></i
           ></a>
         </div>
       </div>
+      <!--Navigation-->
       <nav class="listContainer">
         <ul id="menuList">
           <li class="menuItems aboutMe">About Me</li>
@@ -127,8 +128,8 @@
         </ul>
       </nav>
     </div>
-    <script src="app.js"></script>
-    <script src="main.js"></script>
-    <script src="aboutMe.js"></script>
+    <script src="code/app.js"></script>
+    <script src="code/main.js"></script>
+    <script src="code/aboutMe.js"></script>
   </body>
 </html>
