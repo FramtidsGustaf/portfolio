@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=PT+Mono&family=Varela+Round&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=PT+Mono&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/151ef5057d.js" crossorigin="anonymous"></script>
     <title>Gustaf</title>
   </head>
@@ -21,19 +24,45 @@
           alt="an awesome picture of me and two puppies"
           class="puppiePicture"
         />
-            <div class="title">
-              <h1>Gustaf Johnsson</h1>
-              <h2>Aspiring Fullstack Web Developer</h2> 
-            </div>
-            <div id="card">
-            </div>
-            <div id="icons">
-              <a target="_blank" href="https://www.w3.org/TR/2017/REC-html52-20171214/"><i class="fab fa-html5 skillIcons"></i></a>
-              <a target="_blank" href="https://www.w3.org/standards/webdesign/htmlcss.html#whatcss"><i class="fab fa-css3-alt skillIcons"></i></a>
-              <a target="_blank" href="https://sass-lang.com/"><i class="fab fa-sass skillIcons"></i></a>
-              <a target="_blank" href="https://www.php.net/"><i class="fab fa-php skillIcons"></i></a>
-              <a target="_blank" href="https://nodejs.org/en/"><i class="fab fa-node skillIcons"></i></a>
-            </div>
+        <div class="title">
+          <h1>Gustaf Johnsson</h1>
+          <h2>Aspiring Fullstack Web Developer</h2>
+        </div>
+        <nav class="buttons">
+          <div class="skillButton buttonAboutMe">Skills</div>
+          <div class="educationButton buttonAboutMe">Education</div>
+          <div class="gustafButton buttonAboutMe">Gustaf</div>
+        </nav>
+        <div id="card">
+          <h3 class="titleAcquiered hidden">Acquiered Skills</h3>
+          <h3 class="titleNotAcquiered hidden">Skills Yet To Acquier</h3>
+          <div class="acquieredSkills hidden">
+            <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript"
+              ><i class="fab fa-js skillIcons"></i
+            ></a>
+            <a target="_blank" href="https://www.w3.org/TR/2017/REC-html52-20171214/"
+              ><i class="fab fa-html5 skillIcons"></i
+            ></a>
+            <a target="_blank" href="https://www.w3.org/standards/webdesign/htmlcss.html#whatcss"
+              ><i class="fab fa-css3-alt skillIcons"></i
+            ></a>
+            <a target="_blank" href="https://sass-lang.com/"
+              ><i class="fab fa-sass skillIcons"></i
+            ></a>
+          </div>
+          <div class="skillsToAcquier hidden">
+            <a target="_blank" href="https://www.php.net/"><i class="fab fa-php skillIcons"></i></a>
+            <a target="_blank" href="https://nodejs.org/en/"
+              ><i class="fab fa-node skillIcons"></i
+            ></a>
+            <a
+              class="etc"
+              target="_blank"
+              href="https://nackademin.se/utbildningar/webbutvecklare-fullstack-open-source/"
+              >etc...</a
+            >
+          </div>
+        </div>
       </section>
       <!--Portfolio page-->
       <div class="contentPages portfolioPage">
@@ -44,7 +73,9 @@
         </div>
         <div id="quiz" class="hideQuiz">
           <a target="_blank" href="https://gustafbrun.github.io/quiz/">
-            <h3 class="quizLogo">new <span id="quizWord">Quiz</span><span id="parentheses">()</span>;</h3>
+            <h3 class="quizLogo">
+              new <span id="quizWord">Quiz</span><span id="parentheses">()</span>;
+            </h3>
           </a>
         </div>
       </div>
@@ -52,7 +83,7 @@
       <div class="contentPages contactMePage">
         <div id="linkedInContainer">
           <a target="_blank" href="https://www.linkedin.com/in/gustaf-johnsson-814664134/"
-            ><i " class="fab fa-linkedin linkedIn" alt="The linkedIn icon"></i
+            ><i class="fab fa-linkedin linkedIn" alt="The linkedIn icon"></i
           ></a>
         </div>
         <div id="githubContainer">
@@ -71,5 +102,6 @@
     </div>
     <script src="app.js"></script>
     <script src="main.js"></script>
+    <script src="aboutMe.js"></script>
   </body>
 </html>

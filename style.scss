@@ -131,6 +131,46 @@ $quizBGC: #212121;
   transition: all 0.4s ease-in-out;
   user-select: none;
 }
+@mixin aboutmebuttons {
+  color: $textMenu;
+  background-color: $backgroundMenu;
+  border: 3px solid $backgroundMenu;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  height: 3rem;
+  width: 6rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: $aboutMe;
+    color: $backgroundMenu;
+  }
+}
+@mixin skills($column, $row) {
+  grid-column: $column;
+  grid-row: $row;
+  justify-self: center;
+  background-color: $backgroundMenu;
+  border-radius: 3px;
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+@mixin acquierTitle($column, $row) {
+  grid-column: $column;
+  grid-row: $row;
+  font-size: 2rem;
+  justify-self: center;
+  align-self: center;
+  transition: all 0.5s ease-in-out;
+}
 * {
   margin: 0;
   padding: 0;
@@ -363,7 +403,7 @@ body {
       padding: 2%;
       color: $backgroundMenu;
       .title {
-        grid-column: 1/4;
+        grid-column: 1/3;
         grid-row: 1;
         width: fit-content;
         h1 {
@@ -373,32 +413,74 @@ body {
           text-align: center;
         }
       }
+      .buttons {
+        grid-column: 3;
+        grid-row: 1;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .skillButton {
+          @include aboutmebuttons();
+        }
+        .educationButton {
+          @include aboutmebuttons();
+        }
+        .gustafButton {
+          @include aboutmebuttons();
+        }
+      }
       #card {
         margin: 2%;
         padding: 1%;
-        background-color: rgba($color: $textMenu, $alpha: 0.2);
         border-radius: 3px;
         grid-column: 1/4;
         grid-row: 2;
-        ul {
-          list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+        .titleAcquiered {
+          @include acquierTitle(1, 1);
+          &.hidden {
+            transform: translate(-300%);
+          }
         }
-      }
-      #icons {
-        grid-column: 1/3;
-        grid-row: 3;
-        align-items: flex-end;
-        justify-content: space-around;
-        display: flex;
-      }
-      .skillIcons {
-        transition: all 0.2s ease-in-out;
-        font-size: 4rem;
-        color: $backgroundMenu;
-        &:hover {
+        .titleNotAcquiered {
+          @include acquierTitle(2, 1);
+          &.hidden {
+            transform: translate(300%);
+          }
+        }
+        .acquieredSkills {
+          @include skills(1, 2);
+          &.hidden {
+            transform: translate(-300%);
+          }
+        }
+        .skillsToAcquier {
+          @include skills(2, 2);
+          &.hidden {
+            transform: translate(300%);
+          }
+          .etc {
+            text-decoration: none;
+            color: $aboutMe;
+            border-radius: 3px;
+            font-size: 3.5vw;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              color: $backgroundMenu;
+              background-color: $aboutMe;
+              transform: scale(1.1);
+            }
+          }
+        }
+        .skillIcons {
+          font-size: 6.5vw;
           color: $textMenu;
-          transform: scale(1.2);
-          text-shadow: 1px 1px 1px $backgroundMenu;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
       }
 

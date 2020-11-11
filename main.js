@@ -2,6 +2,7 @@ class Main {
   constructor() {
     this.landingPage();
     this.menuPick();
+    this.aboutMePage = new AboutMe();
   }
   landingPage() {
     const startButton = document.querySelector(".startButton");
