@@ -1,0 +1,38 @@
+@mixin contactMe($placement, $color) {
+  color: $color;
+  font-size: 10rem;
+  transition: all 0.3s ease-out;
+  transform: translate($placement);
+}
+@mixin contacMeDesktop($placement, $color, $hoverColor) {
+  @include contactMe($placement, $color);
+  cursor: pointer;
+  &:hover {
+    color: $hoverColor;
+    text-shadow: 2px 2px 4px $backgroundMenu;
+    transform: scale(1.4);
+  }
+}
+.contactMePage {
+  @include pages($contactMe);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  #linkedInContainer {
+    .linkedIn {
+      @include contacMeDesktop(-1000%, $backgroundMenu, $textMenu);
+    }
+    .revealIcon {
+      transform: translate(0%);
+    }
+  }
+  #githubContainer {
+    .github {
+      @include contacMeDesktop(1000%, $backgroundMenu, $textMenu);
+    }
+    .revealIcon {
+      transform: translate(0%);
+    }
+  }
+}

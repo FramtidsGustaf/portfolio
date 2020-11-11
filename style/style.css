@@ -1,0 +1,890 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*---------------For decvices smaller than 992px in widht------------------*/
+@media screen and (max-width: 992px) {
+  .main {
+    height: 100vh;
+    background-color: #171d1c;
+    display: grid;
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: 75vh 25vh;
+    overflow: hidden;
+    padding-top: 5%;
+  }
+  .main .landingText {
+    width: fit-content;
+    font-family: "Varela Round", sans-serif;
+    font-size: 100%;
+    color: #efe9f4;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+    transition: all 0.4s;
+  }
+  .main .landingText span {
+    color: #ffba49;
+  }
+  .main .hideLandingText {
+    left: 150%;
+  }
+  .main .hi {
+    width: fit-content;
+    font-family: "Varela Round", sans-serif;
+    color: #ffba49;
+    font-size: 1000%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease-in-out;
+    user-select: none;
+  }
+  .main .hideHi {
+    color: transparent;
+  }
+  .main .startButton {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #efe9f4;
+    color: #171d1c;
+    font-family: "Varela Round", sans-serif;
+    font-size: 150%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+  }
+  .main .buttonDisapear {
+    animation-name: buttonDisapear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes buttonDisapear {
+    100% {
+      transform: translate(-50%, -100vh);
+    }
+  }
+  .main .aboutMePage {
+    background-color: #ffba49;
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-110%);
+    margin-bottom: 3%;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    font-family: "Varela Round", sans-serif;
+    padding: 2%;
+    color: #171d1c;
+    overflow: scroll;
+  }
+  .main .aboutMePage .content {
+    grid-column: 1/4;
+    grid-row: 2;
+    font-family: "Anonymous Pro", monospace;
+  }
+  .main .aboutMePage .title {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .aboutMePage .title h1 {
+    font-size: 2rem;
+  }
+  .main .aboutMePage .title .subtitle {
+    text-align: center;
+    font-family: "Inconsolata", monospace;
+    font-size: 1.3rem;
+  }
+  .main .aboutMePage .buttons {
+    display: none;
+  }
+  .main .aboutMePage .titleAcquiered {
+    font-size: 1.2rem;
+  }
+  .main .aboutMePage .titleNotAcquiered {
+    font-size: 1.2rem;
+  }
+  .main .aboutMePage .acquieredSkills {
+    text-shadow: 0.2em 0.2em 0.2em #171d1c;
+    border-radius: 3px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .main .aboutMePage .skillsToAcquier {
+    text-shadow: 0.2em 0.2em 0.2em #171d1c;
+    border-radius: 3px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .main .aboutMePage .skillsToAcquier .etc {
+    text-decoration: none;
+    color: #efe9f4;
+    border-radius: 3px;
+    font-size: 2.5em;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 1rem;
+  }
+  .main .aboutMePage .skillIcons {
+    font-size: 4rem;
+    color: #efe9f4;
+  }
+  .main .aboutMePage .educationTitle {
+    font-family: "Inconsolata", monospace;
+    font-size: 1rem;
+    align-self: center;
+    user-select: none;
+  }
+  .main .aboutMePage .nackademin {
+    justify-self: flex-end;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .main .aboutMePage .nackademin .logo {
+    height: 1.5rem;
+  }
+  .main .aboutMePage .educationList {
+    margin-left: 10%;
+    font-size: 1rem;
+    user-select: none;
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .educationList li {
+    margin: 2%;
+  }
+  .main .aboutMePage .textContainer {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  .main .aboutMePage .textContainer .hiAboutMe {
+    font-size: 3rem;
+    color: #ffba49;
+    margin-bottom: 10px;
+    height: fit-content;
+    width: fit-content;
+    background-color: #171d1c;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .textContainer .aboutMeText {
+    font-size: 1.2rem;
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .puppiePicture {
+    justify-self: flex-end;
+    align-self: flex-end;
+    height: 70%;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    transform: translateY(10%);
+    transition: all 0.5s ease-in-out;
+  }
+  .main .portfolioPage {
+    background-color: #bff0a3;
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-110%);
+    margin-bottom: 3%;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 45% 45% 5%;
+  }
+  .main .portfolioPage .content {
+    grid-column: 1/4;
+    grid-row: 2;
+    font-family: "Anonymous Pro", monospace;
+  }
+  .main .portfolioPage #bobblePupper {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    height: 90%;
+    width: 80%;
+    background-color: #fb4d3d;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+  }
+  .main .portfolioPage #bobblePupper a:link {
+    text-decoration: none;
+  }
+  .main .portfolioPage #bobblePupper h3 {
+    font-size: 9vw;
+    font-family: "Fredoka One", cursive;
+    color: #eac435;
+    user-select: none;
+    text-shadow: 1vw 1vw #0e0e11;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .portfolioPage .hideBobblePupper {
+    transform: translateY(-300%);
+  }
+  .main .portfolioPage #quiz {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+    height: 90%;
+    width: 80%;
+    background-color: #212121;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+  }
+  .main .portfolioPage #quiz a:link {
+    text-decoration: none;
+  }
+  .main .portfolioPage #quiz h3 {
+    font-family: "PT Mono", monospace;
+    font-size: 9vw;
+    color: #7bddf1;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .portfolioPage #quiz h3 #quizWord {
+    color: #ffbe45;
+  }
+  .main .portfolioPage #quiz h3 #parentheses {
+    color: #f0715c;
+  }
+  .main .portfolioPage .hideQuiz {
+    transform: translateY(300%);
+  }
+  .main .contactMePage {
+    background-color: #ff8b8b;
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-110%);
+    margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .main .contactMePage .content {
+    grid-column: 1/4;
+    grid-row: 2;
+    font-family: "Anonymous Pro", monospace;
+  }
+  .main .contactMePage #linkedInContainer .linkedIn {
+    color: #171d1c;
+    font-size: 10rem;
+    transition: all 0.3s ease-out;
+    transform: translate(-1000%);
+  }
+  .main .contactMePage #linkedInContainer .revealIcon {
+    transform: translate(0%);
+  }
+  .main .contactMePage #githubContainer .github {
+    color: #171d1c;
+    font-size: 10rem;
+    transition: all 0.3s ease-out;
+    transform: translate(1000%);
+  }
+  .main .contactMePage #githubContainer .revealIcon {
+    transform: translate(0%);
+  }
+  .main .listContainer {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .main .listContainer #menuList {
+    color: #efe9f4;
+    font-family: "Varela Round", sans-serif;
+    font-size: 2.5rem;
+    list-style: none;
+  }
+  .main .listContainer #menuList .menuItems {
+    width: fit-content;
+    border-radius: 2px;
+    user-select: none;
+    transform: translate(-150%);
+    transition: transform 0.3s ease-out;
+  }
+  .main .listContainer #menuList .revealMenuItem {
+    transform: translate(0%);
+  }
+  .main .listContainer #menuList .picked0 {
+    background-color: #ffba49;
+    color: #171d1c;
+    transform: rotate(180deg);
+  }
+  .main .listContainer #menuList .picked1 {
+    background-color: #bff0a3;
+    color: #171d1c;
+    transform: rotate(180deg);
+  }
+  .main .listContainer #menuList .picked2 {
+    background-color: #ff8b8b;
+    color: #171d1c;
+    transform: rotate(180deg);
+  }
+  .main .revealPage {
+    transform: translate(0%);
+  }
+}
+/*-----------------------for devices larger than 992px----------------------*/
+@media screen and (min-width: 992px) {
+  .main {
+    padding: 1.5%;
+    height: 100vh;
+    width: 100%;
+    background-color: #171d1c;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: ". mainContent mainContent" ". mainContent mainContent" "menu mainContent mainContent";
+  }
+  .main .landingText {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    width: fit-content;
+    font-family: "Varela Round", sans-serif;
+    color: #efe9f4;
+    font-size: 350%;
+    transform: translate(-50%);
+    transition: all 0.4s;
+    user-select: none;
+  }
+  .main .landingText span {
+    color: #ffba49;
+  }
+  .main .hideLandingText {
+    left: 150%;
+  }
+  .main .hi {
+    width: fit-content;
+    font-family: "Varela Round", sans-serif;
+    color: #ffba49;
+    font-size: 1000%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease-in-out;
+    user-select: none;
+  }
+  .main .hideHi {
+    color: transparent;
+  }
+  .main .startButton {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #efe9f4;
+    color: #171d1c;
+    font-family: "Varela Round", sans-serif;
+    font-size: 150%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+  }
+  .main .startButton:hover {
+    background-color: #171d1c;
+    color: #efe9f4;
+    border: solid 2px #efe9f4;
+  }
+  .main .buttonDisapear {
+    animation-name: buttonDisapear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes buttonDisapear {
+    100% {
+      transform: translate(-50%, -100vh);
+    }
+  }
+  .main .aboutMePage {
+    background-color: #ffba49;
+    grid-area: mainContent;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    transform: translateY(-110%);
+    transition: all 0.3s ease-in-out;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: 1fr 70% 1fr;
+    font-family: "Varela Round", sans-serif;
+    padding: 2%;
+    color: #171d1c;
+  }
+  .main .aboutMePage .title {
+    grid-column: 1/3;
+    grid-row: 1;
+    width: fit-content;
+  }
+  .main .aboutMePage .title h1 {
+    font-size: 4rem;
+  }
+  .main .aboutMePage .title .subtitle {
+    text-align: center;
+    font-family: "Inconsolata", monospace;
+  }
+  .main .aboutMePage .buttons {
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .main .aboutMePage .buttons .skillButton {
+    color: #efe9f4;
+    background-color: #171d1c;
+    border: 3px solid #171d1c;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    height: 3rem;
+    width: 6rem;
+    transition: all 0.2s ease-in-out;
+    margin: 2px;
+    cursor: pointer;
+  }
+  .main .aboutMePage .buttons .skillButton:hover {
+    background-color: #ffba49;
+    color: #171d1c;
+  }
+  .main .aboutMePage .buttons .educationButton {
+    color: #efe9f4;
+    background-color: #171d1c;
+    border: 3px solid #171d1c;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    height: 3rem;
+    width: 6rem;
+    transition: all 0.2s ease-in-out;
+    margin: 2px;
+    cursor: pointer;
+  }
+  .main .aboutMePage .buttons .educationButton:hover {
+    background-color: #ffba49;
+    color: #171d1c;
+  }
+  .main .aboutMePage .buttons .gustafButton {
+    color: #efe9f4;
+    background-color: #171d1c;
+    border: 3px solid #171d1c;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    height: 3rem;
+    width: 6rem;
+    transition: all 0.2s ease-in-out;
+    margin: 2px;
+    cursor: pointer;
+  }
+  .main .aboutMePage .buttons .gustafButton:hover {
+    background-color: #ffba49;
+    color: #171d1c;
+  }
+  .main .aboutMePage #card {
+    margin: 2%;
+    padding: 1%;
+    border-radius: 3px;
+    grid-column: 1/4;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+  }
+  .main .aboutMePage #card .titleAcquiered {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .aboutMePage #card .titleAcquiered.hidden {
+    transform: translate(-300%);
+  }
+  .main .aboutMePage #card .titleNotAcquiered {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .aboutMePage #card .titleNotAcquiered.hidden {
+    transform: translate(300%);
+  }
+  .main .aboutMePage #card .acquieredSkills {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+    text-shadow: 0.2em 0.2em 0.2em #171d1c;
+    border-radius: 3px;
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .aboutMePage #card .acquieredSkills.hidden {
+    transform: translateY(600%);
+  }
+  .main .aboutMePage #card .skillsToAcquier {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    text-shadow: 0.2em 0.2em 0.2em #171d1c;
+    border-radius: 3px;
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .aboutMePage #card .skillsToAcquier.hidden {
+    transform: translateY(600%);
+  }
+  .main .aboutMePage #card .skillsToAcquier .etc {
+    text-decoration: none;
+    color: #efe9f4;
+    border-radius: 3px;
+    font-size: 3.5vw;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 1rem;
+  }
+  .main .aboutMePage #card .skillsToAcquier .etc:hover {
+    transform: scale(1.1);
+  }
+  .main .aboutMePage #card .skillIcons {
+    font-size: 6.5vw;
+    color: #efe9f4;
+    transition: all 0.2s ease-in-out;
+  }
+  .main .aboutMePage #card .skillIcons:hover {
+    transform: scale(1.1);
+  }
+  .main .aboutMePage .educationTitle {
+    font-family: "Inconsolata", monospace;
+    grid-column: 1/3;
+    grid-row: 1;
+    font-size: 2.5rem;
+    align-self: center;
+    user-select: none;
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .educationTitle.hidden {
+    transform: translate(-200%);
+  }
+  .main .aboutMePage .nackademin {
+    grid-column: 2/3;
+    grid-row: 1;
+    justify-self: flex-end;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .nackademin .logo {
+    height: 1.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .aboutMePage .nackademin .logo:hover {
+    transform: scale(1.1);
+  }
+  .main .aboutMePage .nackademin.hidden {
+    transform: translate(200%);
+  }
+  .main .aboutMePage .educationList {
+    margin-left: 10%;
+    grid-column: 1/3;
+    grid-row: 2;
+    font-size: 1.5rem;
+    user-select: none;
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .educationList li {
+    margin: 2%;
+  }
+  .main .aboutMePage .educationList.hidden {
+    transform: translateY(200%);
+  }
+  .main .aboutMePage .textContainer {
+    width: 120%;
+    align-self: center;
+    grid-column: 1;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  .main .aboutMePage .textContainer .hiAboutMe {
+    font-size: 3rem;
+    color: #ffba49;
+    margin-bottom: 10px;
+    height: fit-content;
+    width: fit-content;
+    background-color: #171d1c;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .textContainer .hiAboutMe.hidden {
+    transform: translateX(90vw);
+  }
+  .main .aboutMePage .textContainer .aboutMeText {
+    font-size: 1.2rem;
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .textContainer .aboutMeText.hidden {
+    transform: translateX(-200%);
+  }
+  .main .aboutMePage .puppiePicture {
+    justify-self: flex-end;
+    align-self: flex-end;
+    height: 70%;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    transform: translateY(10%);
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .puppiePicture.hidden {
+    transform: translateY(200%);
+  }
+  .main .portfolioPage {
+    background-color: #bff0a3;
+    grid-area: mainContent;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    transform: translateY(-110%);
+    transition: all 0.3s ease-in-out;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 45% 45% 5%;
+  }
+  .main .portfolioPage #bobblePupper {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    height: 90%;
+    width: 80%;
+    background-color: #fb4d3d;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+    box-shadow: 3px 3px 3px #171d1c;
+  }
+  .main .portfolioPage #bobblePupper a:link {
+    text-decoration: none;
+  }
+  .main .portfolioPage #bobblePupper .bobblePupperLogo {
+    font-size: 6vw;
+    font-family: "Fredoka One", cursive;
+    color: #eac435;
+    user-select: none;
+    text-shadow: 0.3vw 0.3vw #0e0e11;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .portfolioPage #bobblePupper .bobblePupperLogo:hover {
+    transform: scale(1.2);
+  }
+  .main .portfolioPage .hideBobblePupper {
+    transform: translateY(-300%);
+  }
+  .main .portfolioPage #quiz {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+    height: 90%;
+    width: 80%;
+    background-color: #212121;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+  }
+  .main .portfolioPage #quiz a:link {
+    text-decoration: none;
+  }
+  .main .portfolioPage #quiz .quizLogo {
+    font-family: "PT Mono", monospace;
+    font-size: 6vw;
+    color: #7bddf1;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .main .portfolioPage #quiz .quizLogo #quizWord {
+    color: #ffbe45;
+  }
+  .main .portfolioPage #quiz .quizLogo #parentheses {
+    color: #f0715c;
+  }
+  .main .portfolioPage #quiz .quizLogo:hover {
+    transform: scale(1.2);
+  }
+  .main .portfolioPage .hideQuiz {
+    transform: translateY(300%);
+  }
+  .main .contactMePage {
+    background-color: #ff8b8b;
+    grid-area: mainContent;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    transform: translateY(-110%);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .main .contactMePage #linkedInContainer .linkedIn {
+    color: #171d1c;
+    font-size: 10rem;
+    transition: all 0.3s ease-out;
+    transform: translate(-1000%);
+    cursor: pointer;
+  }
+  .main .contactMePage #linkedInContainer .linkedIn:hover {
+    color: #efe9f4;
+    text-shadow: 2px 2px 4px #171d1c;
+    transform: scale(1.4);
+  }
+  .main .contactMePage #linkedInContainer .revealIcon {
+    transform: translate(0%);
+  }
+  .main .contactMePage #githubContainer .github {
+    color: #171d1c;
+    font-size: 10rem;
+    transition: all 0.3s ease-out;
+    transform: translate(1000%);
+    cursor: pointer;
+  }
+  .main .contactMePage #githubContainer .github:hover {
+    color: #efe9f4;
+    text-shadow: 2px 2px 4px #171d1c;
+    transform: scale(1.4);
+  }
+  .main .contactMePage #githubContainer .revealIcon {
+    transform: translate(0%);
+  }
+  .main .listContainer {
+    grid-area: menu;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+  }
+  .main .listContainer #menuList {
+    color: #efe9f4;
+    font-family: "Varela Round", sans-serif;
+    font-size: 3rem;
+    list-style: none;
+  }
+  .main .listContainer #menuList .menuItems {
+    width: fit-content;
+    border-radius: 2px;
+    user-select: none;
+    transform: translate(-150%);
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 2px;
+  }
+  .main .listContainer #menuList .menuItems:hover {
+    background-color: #efe9f4;
+    color: #171d1c;
+  }
+  .main .listContainer #menuList .revealMenuItem {
+    transform: translate(0%);
+  }
+  .main .listContainer #menuList .picked0 {
+    background-color: #ffba49;
+    color: #171d1c;
+    transform: rotate(-5deg);
+  }
+  .main .listContainer #menuList .picked1 {
+    background-color: #bff0a3;
+    color: #171d1c;
+    transform: rotate(-5deg);
+  }
+  .main .listContainer #menuList .picked2 {
+    background-color: #ff8b8b;
+    color: #171d1c;
+    transform: rotate(-5deg);
+  }
+  .main .revealPage {
+    transform: translateY(0%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

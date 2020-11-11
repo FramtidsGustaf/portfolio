@@ -1,0 +1,45 @@
+@mixin picked($color) {
+  background-color: $color;
+  color: $backgroundMenu;
+}
+@mixin menuList($size) {
+  color: $textMenu;
+  font-family: "Varela Round", sans-serif;
+  font-size: $size;
+  list-style: none;
+}
+@mixin menuItems {
+  width: fit-content;
+  border-radius: 2px;
+  user-select: none;
+  transform: translate(-150%);
+  transition: transform 0.3s ease-out;
+}
+.listContainer {
+  grid-column: 2;
+  grid-row: 2;
+  #menuList {
+    @include menuList(2.5rem);
+    .menuItems {
+      @include menuItems();
+    }
+    .revealMenuItem {
+      transform: translate(0%);
+    }
+    .picked0 {
+      @include picked($aboutMe);
+      transform: rotate(180deg);
+    }
+    .picked1 {
+      @include picked($portfolio);
+      transform: rotate(180deg);
+    }
+    .picked2 {
+      @include picked($contactMe);
+      transform: rotate(180deg);
+    }
+  }
+}
+.revealPage {
+  transform: translate(0%);
+}

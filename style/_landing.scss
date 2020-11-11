@@ -1,0 +1,72 @@
+@mixin hi {
+  width: fit-content;
+  font-family: "Varela Round", sans-serif;
+  color: $aboutMe;
+  font-size: 1000%;
+  @include absolute(50%, 50%);
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease-in-out;
+  user-select: none;
+}
+@mixin startButton {
+  height: fit-content;
+  width: fit-content;
+  @include absolute(50%, 50%);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: $textMenu;
+  color: $backgroundMenu;
+  font-family: "Varela Round", sans-serif;
+  font-size: 150%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+}
+@mixin starButtonDisapear {
+  animation-name: buttonDisapear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.landingText {
+  @include absolute(50%, 20%);
+  width: fit-content;
+  font-family: "Varela Round", sans-serif;
+  color: $textMenu;
+  font-size: 350%;
+  transform: translate(-50%);
+  transition: all 0.4s;
+  user-select: none;
+  span {
+    color: $aboutMe;
+  }
+}
+.hideLandingText {
+  left: 150%;
+}
+.hi {
+  @include hi();
+}
+.hideHi {
+  color: transparent;
+}
+.startButton {
+  @include startButton();
+  &:hover {
+    background-color: $backgroundMenu;
+    color: $textMenu;
+    border: solid 2px $textMenu;
+  }
+}
+.buttonDisapear {
+  @include starButtonDisapear();
+}
+@keyframes buttonDisapear {
+  100% {
+    transform: translate(-50%, -100vh);
+  }
+}

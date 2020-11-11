@@ -1,0 +1,73 @@
+@mixin portfolioLogosContainer($color) {
+  align-self: center;
+  justify-self: center;
+  height: 90%;
+  width: 80%;
+  background-color: $color;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-out;
+  a:link {
+    text-decoration: none;
+  }
+}
+@mixin bobblePupperLogo($size, $shadow) {
+  font-size: $size;
+  font-family: "Fredoka One", cursive;
+  color: #eac435;
+  user-select: none;
+  text-shadow: $shadow $shadow #0e0e11;
+  transition: all 0.3s ease-in-out;
+}
+@mixin quizLogo($size) {
+  font-family: "PT Mono", monospace;
+  font-size: $size;
+  color: #7bddf1;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+.portfolioPage {
+  @include pages($portfolio);
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 5% 45% 45% 5%;
+  #bobblePupper {
+    grid-column: 2;
+    grid-row: 2;
+    @include portfolioLogosContainer($bobblePupperBGC);
+    box-shadow: 3px 3px 3px $backgroundMenu;
+    .bobblePupperLogo {
+      @include bobblePupperLogo(6vw, 0.3vw);
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .hideBobblePupper {
+    transform: translateY(-300%);
+  }
+  #quiz {
+    grid-column: 2;
+    grid-row: 3;
+    @include portfolioLogosContainer($quizBGC);
+
+    .quizLogo {
+      @include quizLogo(6vw);
+
+      #quizWord {
+        color: #ffbe45;
+      }
+      #parentheses {
+        color: #f0715c;
+      }
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .hideQuiz {
+    transform: translateY(300%);
+  }
+}
