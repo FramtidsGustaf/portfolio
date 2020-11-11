@@ -144,6 +144,7 @@ $quizBGC: #212121;
   height: 3rem;
   width: 6rem;
   transition: all 0.2s ease-in-out;
+  margin: 2px;
   cursor: pointer;
   &:hover {
     background-color: $aboutMe;
@@ -161,7 +162,7 @@ $quizBGC: #212121;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 @mixin acquierTitle($column, $row) {
   grid-column: $column;
@@ -454,13 +455,13 @@ body {
         .acquieredSkills {
           @include skills(1, 2);
           &.hidden {
-            transform: translateY(500%);
+            transform: translateY(600%);
           }
         }
         .skillsToAcquier {
           @include skills(2, 2);
           &.hidden {
-            transform: translateY(500%);
+            transform: translateY(600%);
           }
           .etc {
             text-decoration: none;
@@ -529,17 +530,44 @@ body {
           transform: translateY(200%);
         }
       }
+      .hiAboutMe {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 3rem;
+        align-self: center;
+        color: $aboutMe;
+        background-color: $backgroundMenu;
+        width: fit-content;
+        border-radius: 2px;
+        transition: all 0.5s ease-in-out;
+        &.hidden {
+          transform: translateX(90vw);
+        }
+      }
+      .aboutMeText {
+        font-size: 120%;
+        grid-column: 1;
+        grid-row: 2;
+        width: 120%;
 
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        transition: all 0.5s ease-in-out;
+        &.hidden {
+          transform: translateX(-200%);
+        }
+      }
       .puppiePicture {
         justify-self: flex-end;
         align-self: flex-end;
         height: 70%;
         grid-column: 2/4;
         grid-row: 2/4;
-        transform: translateY(70%);
-        transition: all 1s ease-in-out;
-        &:hover {
-          transform: translateY(10%);
+        transform: translateY(10%);
+        transition: all 0.5s ease-in-out;
+        &.hidden {
+          transform: translateY(200%);
         }
       }
     }

@@ -17,6 +17,11 @@ class AboutMe {
     const educationList = document.querySelector(".educationList");
     const educationArray = [nackademin, educationTitle, educationList];
 
+    const hiAboutMe = document.querySelector(".hiAboutMe");
+    const aboutMeText = document.querySelector(".aboutMeText");
+    const puppiePicture = document.querySelector(".puppiePicture");
+    const meArray = [hiAboutMe, aboutMeText, puppiePicture];
+
     buttonContainer.addEventListener("click", (e) => {
       let addHidden = (array) => {
         for (let element of array) {
@@ -30,12 +35,16 @@ class AboutMe {
       };
       addHidden(skillArray);
       addHidden(educationArray);
+      addHidden(meArray);
 
       if (e.target === buttons[0]) {
         removeHidden(skillArray);
       }
       if (e.target === buttons[1]) {
         removeHidden(educationArray);
+      }
+      if (e.target === buttons[2]) {
+        removeHidden(meArray);
       }
     });
   }

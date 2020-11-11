@@ -399,6 +399,7 @@ body {
     height: 3rem;
     width: 6rem;
     transition: all 0.2s ease-in-out;
+    margin: 2px;
     cursor: pointer;
   }
   .main .aboutMePage .buttons .skillButton:hover {
@@ -418,6 +419,7 @@ body {
     height: 3rem;
     width: 6rem;
     transition: all 0.2s ease-in-out;
+    margin: 2px;
     cursor: pointer;
   }
   .main .aboutMePage .buttons .educationButton:hover {
@@ -437,6 +439,7 @@ body {
     height: 3rem;
     width: 6rem;
     transition: all 0.2s ease-in-out;
+    margin: 2px;
     cursor: pointer;
   }
   .main .aboutMePage .buttons .gustafButton:hover {
@@ -486,10 +489,10 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .main .aboutMePage #card .acquieredSkills.hidden {
-    transform: translateY(500%);
+    transform: translateY(600%);
   }
   .main .aboutMePage #card .skillsToAcquier {
     grid-column: 2;
@@ -502,10 +505,10 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .main .aboutMePage #card .skillsToAcquier.hidden {
-    transform: translateY(500%);
+    transform: translateY(600%);
   }
   .main .aboutMePage #card .skillsToAcquier .etc {
     text-decoration: none;
@@ -572,17 +575,44 @@ body {
   .main .aboutMePage .educationList.hidden {
     transform: translateY(200%);
   }
+  .main .aboutMePage .hiAboutMe {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 3rem;
+    align-self: center;
+    color: #ffba49;
+    background-color: #171d1c;
+    width: fit-content;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .hiAboutMe.hidden {
+    transform: translateX(90vw);
+  }
+  .main .aboutMePage .aboutMeText {
+    font-size: 120%;
+    grid-column: 1;
+    grid-row: 2;
+    width: 120%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .aboutMeText.hidden {
+    transform: translateX(-200%);
+  }
   .main .aboutMePage .puppiePicture {
     justify-self: flex-end;
     align-self: flex-end;
     height: 70%;
     grid-column: 2/4;
     grid-row: 2/4;
-    transform: translateY(70%);
-    transition: all 1s ease-in-out;
-  }
-  .main .aboutMePage .puppiePicture:hover {
     transform: translateY(10%);
+    transition: all 0.5s ease-in-out;
+  }
+  .main .aboutMePage .puppiePicture.hidden {
+    transform: translateY(200%);
   }
   .main .portfolioPage {
     background-color: #bff0a3;
