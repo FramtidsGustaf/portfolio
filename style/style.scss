@@ -1,0 +1,83 @@
+@import "colors";
+@mixin absolute($left, $top) {
+  position: absolute;
+  left: $left;
+  top: $top;
+}
+@mixin pages($color) {
+  background-color: $color;
+  grid-area: mainContent;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  transform: translateY(-110%);
+  transition: all 0.3s ease-in-out;
+}
+@mixin pagesMobile($color) {
+  background-color: $color;
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 2px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-110%);
+  margin-bottom: 3%;
+  .content {
+    grid-column: 1/4;
+    grid-row: 2;
+    font-family: "Anonymous Pro", monospace;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*---------------For decvices smaller than 992px in widht------------------*/
+@media screen and (max-width: 992px) {
+  .main {
+    height: 100vh;
+    background-color: $backgroundMenu;
+    display: grid;
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: 75vh 25vh;
+    overflow: hidden;
+    padding-top: 5%;
+
+    @import "landingMobile";
+    @import "aboutMeMobile";
+    @import "portfolioMobile";
+    @import "contactMeMobile";
+    @import "_navigationMobile";
+  }
+}
+
+/*-----------------------for devices larger than 992px----------------------*/
+@media screen and (min-width: 992px) {
+  .main {
+    padding: 1.5%;
+    height: 100vh;
+    width: 100%;
+    background-color: $backgroundMenu;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      ". mainContent mainContent"
+      ". mainContent mainContent"
+      "menu mainContent mainContent";
+
+    @import "landing";
+    @import "aboutMe";
+    @import "portfolio";
+    @import "contactMe";
+    @import "navigation";
+  }
+}

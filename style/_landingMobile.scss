@@ -1,0 +1,66 @@
+@mixin hi {
+  width: fit-content;
+  font-family: "Varela Round", sans-serif;
+  color: $aboutMe;
+  font-size: 1000%;
+  @include absolute(50%, 50%);
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease-in-out;
+  user-select: none;
+}
+@mixin starButtonDisapear {
+  animation-name: buttonDisapear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@mixin startButton {
+  height: fit-content;
+  width: fit-content;
+  @include absolute(50%, 50%);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: $textMenu;
+  color: $backgroundMenu;
+  font-family: "Varela Round", sans-serif;
+  font-size: 150%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+}
+.landingText {
+  width: fit-content;
+  font-family: "Varela Round", sans-serif;
+  font-size: 100%;
+  color: $textMenu;
+  @include absolute(50%, 30%);
+  transform: translate(-50%);
+  transition: all 0.4s;
+  span {
+    color: $aboutMe;
+  }
+}
+.hideLandingText {
+  left: 150%;
+}
+.hi {
+  @include hi();
+}
+.hideHi {
+  color: transparent;
+}
+.startButton {
+  @include startButton();
+}
+.buttonDisapear {
+  @include starButtonDisapear();
+}
+@keyframes buttonDisapear {
+  100% {
+    transform: translate(-50%, -100vh);
+  }
+}
