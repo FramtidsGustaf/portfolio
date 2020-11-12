@@ -127,18 +127,15 @@ body {
     display: none;
   }
   .main .aboutMePage .titleAcquiered {
-    font-size: 1.2rem;
     display: none;
   }
   .main .aboutMePage .titleNotAcquiered {
-    font-size: 1.2rem;
     display: none;
   }
   .main .aboutMePage .acquieredSkills {
     text-shadow: 0.2em 0.2em 0.2em #171d1c;
     border-radius: 3px;
     width: 100%;
-    height: fit-content;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -147,7 +144,6 @@ body {
     text-shadow: 0.2em 0.2em 0.2em #171d1c;
     border-radius: 3px;
     width: 100%;
-    height: fit-content;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -169,9 +165,9 @@ body {
     font-size: 1rem;
     align-self: center;
     user-select: none;
+    margin-bottom: 5%;
   }
   .main .aboutMePage .nackademin {
-    width: 100%;
     margin: 8% 0 5% 0;
     display: flex;
     justify-content: center;
@@ -181,16 +177,12 @@ body {
   }
   .main .aboutMePage .educationList {
     margin-left: 10%;
+    margin-bottom: 5%;
     font-size: 1rem;
     user-select: none;
-    transition: all 0.5s ease-in-out;
   }
   .main .aboutMePage .educationList li {
     margin: 2%;
-  }
-  .main .aboutMePage .textContainer {
-    width: 100%;
-    align-self: center;
   }
   .main .aboutMePage .textContainer .hiAboutMe {
     font-size: 3rem;
@@ -205,13 +197,6 @@ body {
     font-size: 1.2rem;
   }
   .main .aboutMePage .puppiePicture {
-    justify-self: flex-end;
-    align-self: flex-end;
-    height: 70%;
-    grid-column: 2/4;
-    grid-row: 2/4;
-    transform: translateY(10%);
-    transition: all 0.5s ease-in-out;
     display: none;
   }
   .main .portfolioPage {
