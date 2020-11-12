@@ -21,7 +21,6 @@
 }
 .aboutMePage {
   @include pagesMobile($aboutMe);
-  display: grid;
   display: flex;
   flex-direction: column;
   font-family: "Varela Round", sans-serif;
@@ -41,6 +40,7 @@
       text-align: center;
       font-family: "Inconsolata", monospace;
       font-size: 1.3rem;
+      margin: 10% 0 10% 0;
     }
   }
   .buttons {
@@ -49,9 +49,11 @@
 
   .titleAcquiered {
     font-size: 1.2rem;
+    display: none;
   }
   .titleNotAcquiered {
     font-size: 1.2rem;
+    display: none;
   }
   .acquieredSkills {
     text-shadow: 0.2em 0.2em 0.2em $backgroundMenu;
@@ -80,7 +82,7 @@
     }
   }
   .skillIcons {
-    font-size: 4rem;
+    font-size: 3rem;
     color: $textMenu;
   }
 
@@ -91,11 +93,10 @@
     user-select: none;
   }
   .nackademin {
-    justify-self: flex-end;
-    width: fit-content;
-    height: fit-content;
+    width: 100%;
+    margin: 8% 0 5% 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 
     .logo {
       height: 1.5rem;
@@ -115,9 +116,6 @@
     width: 100%;
     align-self: center;
 
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
     .hiAboutMe {
       font-size: 3rem;
       color: $aboutMe;
@@ -126,11 +124,9 @@
       width: fit-content;
       background-color: $backgroundMenu;
       border-radius: 2px;
-      transition: all 0.5s ease-in-out;
     }
     .aboutMeText {
       font-size: 1.2rem;
-      transition: all 0.5s ease-in-out;
     }
   }
   .puppiePicture {
@@ -141,5 +137,6 @@
     grid-row: 2/4;
     transform: translateY(10%);
     transition: all 0.5s ease-in-out;
+    display: none;
   }
 }
