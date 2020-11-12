@@ -20,14 +20,12 @@
   color: #eac435;
   user-select: none;
   text-shadow: $shadow $shadow #0e0e11;
-  transition: all 0.3s ease-in-out;
 }
 @mixin quizLogo($size) {
   font-family: "PT Mono", monospace;
   font-size: $size;
   color: #7bddf1;
   user-select: none;
-  transition: all 0.3s ease-in-out;
 }
 .portfolioPage {
   @include pagesMobile($portfolio);
@@ -37,6 +35,14 @@
   #bobblePupper {
     grid-column: 2;
     grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    .bobblePupperTitle {
+      font-family: "Fredoka One", cursive;
+      font-size: 1.4rem;
+      user-select: none;
+      text-align: center;
+    }
 
     @include portfolioLogosContainer($bobblePupperBGC);
 
@@ -50,6 +56,15 @@
   #quiz {
     grid-column: 2;
     grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    .quizTitle {
+      font-family: "PT Mono", monospace;
+      font-size: 1.4rem;
+      user-select: none;
+      text-align: center;
+      color: #7bddf1;
+    }
     @include portfolioLogosContainer($quizBGC);
 
     h3 {

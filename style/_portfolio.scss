@@ -34,9 +34,18 @@
   display: grid;
   grid-template-columns: 5% 90% 5%;
   grid-template-rows: 5% 45% 45% 5%;
+
   #bobblePupper {
     grid-column: 2;
     grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    .bobblePupperTitle {
+      font-family: "Fredoka One", cursive;
+      font-size: 2rem;
+      user-select: none;
+      text-align: center;
+    }
     @include portfolioLogosContainer($bobblePupperBGC);
     box-shadow: 3px 3px 3px $backgroundMenu;
     .bobblePupperLogo {
@@ -52,8 +61,16 @@
   #quiz {
     grid-column: 2;
     grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    .quizTitle {
+      font-family: "PT Mono", monospace;
+      font-size: 2rem;
+      user-select: none;
+      text-align: center;
+      color: #7bddf1;
+    }
     @include portfolioLogosContainer($quizBGC);
-
     .quizLogo {
       @include quizLogo(6vw);
 

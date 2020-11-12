@@ -215,6 +215,8 @@ body {
   .main .portfolioPage #bobblePupper {
     grid-column: 2;
     grid-row: 2;
+    display: flex;
+    flex-direction: column;
     align-self: center;
     justify-self: center;
     height: 90%;
@@ -226,6 +228,12 @@ body {
     align-items: center;
     transition: all 0.3s ease-out;
   }
+  .main .portfolioPage #bobblePupper .bobblePupperTitle {
+    font-family: "Fredoka One", cursive;
+    font-size: 1.4rem;
+    user-select: none;
+    text-align: center;
+  }
   .main .portfolioPage #bobblePupper a:link {
     text-decoration: none;
   }
@@ -235,7 +243,6 @@ body {
     color: #eac435;
     user-select: none;
     text-shadow: 1vw 1vw #0e0e11;
-    transition: all 0.3s ease-in-out;
   }
   .main .portfolioPage .hideBobblePupper {
     transform: translateY(-300%);
@@ -243,6 +250,8 @@ body {
   .main .portfolioPage #quiz {
     grid-column: 2;
     grid-row: 3;
+    display: flex;
+    flex-direction: column;
     align-self: center;
     justify-self: center;
     height: 90%;
@@ -254,6 +263,13 @@ body {
     align-items: center;
     transition: all 0.3s ease-out;
   }
+  .main .portfolioPage #quiz .quizTitle {
+    font-family: "PT Mono", monospace;
+    font-size: 1.4rem;
+    user-select: none;
+    text-align: center;
+    color: #7bddf1;
+  }
   .main .portfolioPage #quiz a:link {
     text-decoration: none;
   }
@@ -262,7 +278,6 @@ body {
     font-size: 9vw;
     color: #7bddf1;
     user-select: none;
-    transition: all 0.3s ease-in-out;
   }
   .main .portfolioPage #quiz h3 #quizWord {
     color: #ffbe45;
@@ -724,6 +739,8 @@ body {
   .main .portfolioPage #bobblePupper {
     grid-column: 2;
     grid-row: 2;
+    display: flex;
+    flex-direction: column;
     align-self: center;
     justify-self: center;
     height: 90%;
@@ -735,6 +752,12 @@ body {
     align-items: center;
     transition: all 0.3s ease-out;
     box-shadow: 3px 3px 3px #171d1c;
+  }
+  .main .portfolioPage #bobblePupper .bobblePupperTitle {
+    font-family: "Fredoka One", cursive;
+    font-size: 2rem;
+    user-select: none;
+    text-align: center;
   }
   .main .portfolioPage #bobblePupper a:link {
     text-decoration: none;
@@ -756,6 +779,8 @@ body {
   .main .portfolioPage #quiz {
     grid-column: 2;
     grid-row: 3;
+    display: flex;
+    flex-direction: column;
     align-self: center;
     justify-self: center;
     height: 90%;
@@ -766,6 +791,13 @@ body {
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-out;
+  }
+  .main .portfolioPage #quiz .quizTitle {
+    font-family: "PT Mono", monospace;
+    font-size: 2rem;
+    user-select: none;
+    text-align: center;
+    color: #7bddf1;
   }
   .main .portfolioPage #quiz a:link {
     text-decoration: none;
