@@ -475,11 +475,16 @@ body {
     user-select: none;
     height: 3rem;
     width: 6rem;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     margin: 2px;
     cursor: pointer;
   }
   .main .aboutMePage .buttons .skillButton:hover {
+    background-color: #ffba49;
+    color: #171d1c;
+  }
+  .main .aboutMePage .buttons .skillButton.picked {
+    transform: translateY(-20%);
     background-color: #ffba49;
     color: #171d1c;
   }
@@ -495,11 +500,16 @@ body {
     user-select: none;
     height: 3rem;
     width: 6rem;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     margin: 2px;
     cursor: pointer;
   }
   .main .aboutMePage .buttons .educationButton:hover {
+    background-color: #ffba49;
+    color: #171d1c;
+  }
+  .main .aboutMePage .buttons .educationButton.picked {
+    transform: translateY(-20%);
     background-color: #ffba49;
     color: #171d1c;
   }
@@ -515,11 +525,16 @@ body {
     user-select: none;
     height: 3rem;
     width: 6rem;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     margin: 2px;
     cursor: pointer;
   }
   .main .aboutMePage .buttons .gustafButton:hover {
+    background-color: #ffba49;
+    color: #171d1c;
+  }
+  .main .aboutMePage .buttons .gustafButton.picked {
+    transform: translateY(-20%);
     background-color: #ffba49;
     color: #171d1c;
   }
@@ -613,7 +628,7 @@ body {
     font-size: 2.5rem;
     align-self: center;
     user-select: none;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .main .aboutMePage .educationTitle.hidden {
     transform: translate(-200%);
@@ -626,7 +641,7 @@ body {
     height: fit-content;
     display: flex;
     justify-content: flex-end;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .main .aboutMePage .nackademin .logo {
     height: 1.5rem;
@@ -644,7 +659,7 @@ body {
     grid-row: 2;
     font-size: 1.5rem;
     user-select: none;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .main .aboutMePage .educationList li {
     margin: 2%;
@@ -669,14 +684,14 @@ body {
     width: fit-content;
     background-color: #171d1c;
     border-radius: 2px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .main .aboutMePage .textContainer .hiAboutMe.hidden {
     transform: translateX(90vw);
   }
   .main .aboutMePage .textContainer .aboutMeText {
     font-size: 1.2rem;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .main .aboutMePage .textContainer .aboutMeText.hidden {
     transform: translateX(-200%);
@@ -688,7 +703,7 @@ body {
     grid-column: 2/4;
     grid-row: 2/4;
     transform: translateY(10%);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .main .aboutMePage .puppiePicture.hidden {
     transform: translateY(200%);

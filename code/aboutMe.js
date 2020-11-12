@@ -22,21 +22,26 @@ class AboutMe {
           element.classList.remove("hidden");
         }
       };
-
+      for (let button of buttons) {
+        button.classList.remove("picked");
+      }
       addHidden(skills);
       addHidden(education);
       addHidden(gustaf);
       //if user press the "skills" button
       if (e.target === buttons[0]) {
         removeHidden(skills);
+        buttons[0].classList.add("picked");
       }
       //if user press the "education" button
       if (e.target === buttons[1]) {
         removeHidden(education);
+        buttons[1].classList.add("picked");
       }
       //if user press the "Gustaf" button
       if (e.target === buttons[2]) {
         removeHidden(gustaf);
+        buttons[2].classList.add("picked");
       }
     });
   }
