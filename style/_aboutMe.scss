@@ -1,3 +1,4 @@
+/*This partial styles the desktop version of the About Me page*/
 @mixin aboutMeButtons {
   color: $textMenu;
   background-color: $backgroundMenu;
@@ -39,6 +40,7 @@
   align-items: center;
   transition: all 0.3s ease-in-out;
 }
+
 .aboutMePage {
   @include pages($aboutMe);
   display: grid;

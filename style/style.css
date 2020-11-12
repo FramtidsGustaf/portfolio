@@ -1,3 +1,4 @@
+/*This partial stores all the colors*/
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +21,11 @@ body {
     grid-template-rows: 75vh 25vh;
     overflow: hidden;
     padding-top: 5%;
+    /*This partial styles the mobile version of the Landing page*/
+    /*This partial styles the mobile version of the About Me page*/
+    /*This partial style the mobile version of the Portfolio page*/
+    /*This partial styles the mobile version of the Contact Me page*/
+    /*This partial styles the mobile version of the Navigation section*/
   }
   .main .landingText {
     width: fit-content;
@@ -100,11 +106,6 @@ body {
     padding: 2%;
     color: #171d1c;
     overflow: scroll;
-  }
-  .main .aboutMePage .content {
-    grid-column: 1/4;
-    grid-row: 2;
-    font-family: "Anonymous Pro", monospace;
   }
   .main .aboutMePage .title {
     width: fit-content;
@@ -228,11 +229,6 @@ body {
     grid-template-columns: 5% 90% 5%;
     grid-template-rows: 5% 45% 45% 5%;
   }
-  .main .portfolioPage .content {
-    grid-column: 1/4;
-    grid-row: 2;
-    font-family: "Anonymous Pro", monospace;
-  }
   .main .portfolioPage #bobblePupper {
     grid-column: 2;
     grid-row: 2;
@@ -307,11 +303,6 @@ body {
     align-items: center;
     justify-content: space-evenly;
   }
-  .main .contactMePage .content {
-    grid-column: 1/4;
-    grid-row: 2;
-    font-family: "Anonymous Pro", monospace;
-  }
   .main .contactMePage #linkedInContainer .linkedIn {
     color: #171d1c;
     font-size: 10rem;
@@ -379,6 +370,11 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: ". mainContent mainContent" ". mainContent mainContent" "menu mainContent mainContent";
+    /*This partial styles the desktop version of the Landing page*/
+    /*This partial styles the desktop version of the About Me page*/
+    /*This partial style the desktop version of the Portfolio page*/
+    /*This partial style the desktop version of the Contact Me Page*/
+    /*This partial styles the desktop version of the Navigation section*/
   }
   .main .landingText {
     position: absolute;

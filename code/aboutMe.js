@@ -5,49 +5,38 @@ class AboutMe {
   menuPick() {
     const buttonContainer = document.querySelector(".buttons");
     const buttons = document.querySelectorAll(".buttonAboutMe");
-
-    const titleAcquiered = document.querySelector(".titleAcquiered");
-    const titleNotAcquiered = document.querySelector(".titleNotAcquiered");
-    const acquieredSkills = document.querySelector(".acquieredSkills");
-    const skillsToAcquier = document.querySelector(".skillsToAcquier");
-    const skillArray = [titleAcquiered, titleNotAcquiered, acquieredSkills, skillsToAcquier];
-
-    const nackademin = document.querySelector(".nackademin");
-    const educationTitle = document.querySelector(".educationTitle");
-    const educationList = document.querySelector(".educationList");
-    const educationArray = [nackademin, educationTitle, educationList];
-
-    const hiAboutMe = document.querySelector(".hiAboutMe");
-    const aboutMeText = document.querySelector(".aboutMeText");
-    const puppiePicture = document.querySelector(".puppiePicture");
-    const meArray = [hiAboutMe, aboutMeText, puppiePicture];
+    const skills = document.querySelectorAll(".skills");
+    const education = document.querySelectorAll(".education");
+    const gustaf = document.querySelectorAll(".gustaf");
 
     buttonContainer.addEventListener("click", (e) => {
-      let addHidden = (array) => {
+      //this function hides elements
+      const addHidden = (array) => {
         for (let element of array) {
           element.classList.add("hidden");
         }
       };
-      let removeHidden = (array) => {
+      //this function reveals elements
+      const removeHidden = (array) => {
         for (let element of array) {
           element.classList.remove("hidden");
         }
       };
-      addHidden(skillArray);
-      addHidden(educationArray);
-      addHidden(meArray);
 
+      addHidden(skills);
+      addHidden(education);
+      addHidden(gustaf);
       //if user press the "skills" button
       if (e.target === buttons[0]) {
-        removeHidden(skillArray);
+        removeHidden(skills);
       }
       //if user press the "education" button
       if (e.target === buttons[1]) {
-        removeHidden(educationArray);
+        removeHidden(education);
       }
       //if user press the "Gustaf" button
       if (e.target === buttons[2]) {
-        removeHidden(meArray);
+        removeHidden(gustaf);
       }
     });
   }
