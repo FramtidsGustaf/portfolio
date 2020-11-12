@@ -69,7 +69,7 @@ class Main {
         //if user press a button the corresponding content appears
         if (e.target === menuItems[i]) {
           contentPages[i].classList.add("revealPage");
-          menuItems[i].classList.add(`picked${i}`); //gives the menu choice a class wich tilts it litle and gives it the same color as the content part
+          menuItems[i].classList.add(`picked${i}`); //gives the menu choice a class wich tilts it slightly at desktops and flips it on mobile and gives it the same color as the content part
           if (i === 2) {
             setTimeout(() => {
               linkedInIcon.classList.add("revealIcon");
