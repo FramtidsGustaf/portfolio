@@ -1,0 +1,105 @@
+Under tiden som jag jobbat med detta projekt har jag haft ett övergripande tänk kring tillgänglighet. 
+Jag har använt ett flertal vertyg* för att hålla koll på om min hemsida är tillgänglig.
+
+Första punkten som jag tagit fasta på är "1.1.1 Beskriv med text allt innehåll som inte är text".
+Det är inte jättemycket innehåll på min hemsida som inte är text men å andra sidan har jag inte 
+jättemycket innehåll någonstans på hemsidan.
+Initialt försökte jag ge allt som inte var text ett alt-attribut. 
+Det visade sig att det inte riktigt är så det funkar. 
+
+Det må kanske verka självklart att koden ska validera (4.1.1 se till att koden validerar) men jag vill trycka lite extra på detta i denna rapport då jag har
+haft mycket nytta av valideringsverktyg i detta projekt.
+Det va med hjälp av ett sådant verktyg som jag kom underfund med att ikonerna på min hemsida inte får ha ett alt-attribut.
+Efter en del efterforskning fann jag att det fanns ett fullgott alternativ till alt-atributet som är title-attributet.
+Med fullgott alternativ menar jag att, vad jag förstått det som, title-attributet också hjälper till vid t.ex. användning av skärmläsare.
+
+Jag har hela tiden utgått ifrån DIGGs "Vägledninge för webbutveckling"(VFW) i mitt arbete kring tillgänglighet och jag har hela 
+tiden fått väga vad jag tycker ser estetiskt bra ut och vad som faktiskt är tillgängligt. Som exempel kan jag använda mig av 
+punkten (1.4.3 Använd tillräcklig kontrast mellan text och bakgrund).
+I början av projektet tog jag fram en grafisk profil som innehöll ett antal färger och typsnitt som jag tyckte var snygga.
+Jag byggde upp en layout kring denna grafiska profil som jag var väldigt nöjd med. Efter detta använde jag ett verktyg för att 
+se hur kontrasterna mellan text och bakgrund var. Det visade sig att kontrasterna var extremt dåliga och jag var tvungen att tweaka
+min grafiska profil något. Det var väldigt lärorikt att gå emot min första tanke kring det estetiska och jag landade i en ny 
+grafisk profil som jag var nöjd med men också lite mer rik på erfarenhet. Att ifrågasätta sig själv är inte alltid lätt men mer 
+eller mindre alltid nyttigt. 
+
+En punkt som mer eller mindre går att väva in i föregående punkt är (1.4.1 Använd inte enbart färg för att förmedla information).
+I punkten i VFW nämns det "...vissa användare kan inte uppfatta färgskillnader, till exempel på grund av färgblindhet eller för att de använder monokrom skärm...".
+Med denna punkt i åtanke har jag under stora delar av arbetet använt mig av ett tillägg i chrome som presenterar browserns innehåll 
+i monokrom färgskala. Detta har gjort att jag kunnat, dels se om information är tillgänglig även för dessa användare men också om det 
+går att navigera på ett enkelt sätt på hemsidan i monokromt läge och jag är av åsikten att så är fallet.
+
+Den femte och sista punkten jag har utgått ifrån är (3.2.3 Var konsekvent i navigation, struktur och utformning).
+Jag är medveten om att det inte är en jätteavancerad navigation på min hemsida men har haft punkten i åtanke när jag har utformat
+den mobila versionen och desktopversionen. Min tanke har varit att försöka hålla dessa två så lika varandra som möjligt så att användare 
+som potentiellt använder båda versionerna ska ha en så lätt övergång mellan dessa som möjligt.
+
+Alla andra riktlinjer som eventuellt uppfylls är av ren slump.
+
+Analys:
+
+Jag tycker i grund och botten att det är bra att vi försöker göra internet till en plats där alla ska kunna vistas och kunna ta till sig av innehållet.
+Förstås är detta av allra största vikt på myndigheters hemsidor där samhällsviktig information ofta förmedlas.
+Såklart är det av stor vikt även för företag som vill bredda sin kundkrets så att de kan öka sin försäljning.
+Detta blir mer tydligt i tider som dessa när det inte är lika självklart att gå i affärer som tidigare.(Covid 19 i åtanke)
+Det jag, som utvecklare, har brottats mest med under arbetet med tillgänglighet är att min frihet i skapandet blir begränsat.
+Till en början såg jag detta som något som faktiskt också begränsade mig men med tiden vande jag mig vid begränsningarna och kände
+stundtals även att det var något jag kunde luta mig mot i mina beslut kring t.ex. färgval.
+
+I stort är jag nöjd med resultatet av uppgiften. Jag har vabbat en hel del under denna perioden och med det i åtanke så är jag mer än nöjd. 
+Jag började uppgiften med att skissa lite på en layout som jag sedan byggde ut utifrån mobile first strategin. Sedan byggde jag upp sidan som desktopversion.
+Det största felet jag gjorde var att jag fastnade lite i desktoptänket och glömde bort att jag även skulle ha content i mobilversionen. 
+Detta medförde ganska stora problem när jag skulle implementera allt content till mobilversionen. 
+Hade jag under tiden som jag skapade desktopversionen också tänkt på att skapa content som fungerade även på mobil alternativt att jag hade utgått helt från
+mobile first hade nog processen med att få in rätt content på mobilversionen varit lättare. Detta är en lärdom jag tar med mig och jag hoppas att jag kommer kunna 
+använda mig av denna kunskap i framtida arbeten. Det är redan viktigt men jag tror också att det blir viktigare att utveckla bra hemsidor för mobila enheter.
+
+
+Grafisk profil
+
+Som jag har tolkat det är detta fenomen som mest aktuellt när det kommer till företag men även myndigheter och organisationer använder sig 
+sig såklart av grafiska profiler.
+En grafisk profil är en visuell identitet som används för att särskilja bl.a. företag, myndigheter och organisationer från andra aktörer.
+Den kan t.ex. bestå av olika typsnitt, färger och logotyper men även en beskrivning kring i vilka sammanhang en färg eller ett typsnitt skall användas.
+En stark grafisk profil blir viktigare och viktigare för att sticka ut och för att fastna i potentiella kunders eller användares medvetande.
+
+
+Scrum 
+
+Scrum är en agil arbetsmetod. Det är ett sätt att planera, fördela och utföra arbete på. 
+I scrum finns tre huvudsakliga roller. Produktägare, scrum master och utvecklarteam.
+Produktägaren kan ses som en representant för kunden och är den som bestämmer vad som ska prioriteras.
+Produktägaren är den som hanterar product backlog, en lista över kundens önskemål och hur dessa ska prioriteras.
+Scrum master är en person som har större kunskap kring scrum och är den som ser till så att utveckligsteamet arbeter därefter.
+Utvecklingsteamet är den samling personer som huvudsakligen skapar den produkt som kunden beställt.
+
+Utifrån product backlog och dess prioriteringar skapar utvecklingsteamet något som kallas för en sprint backlog.
+Sprinten är en period där utvecklingsteamet jobbar med att skapa det som finns i sprint backlog. 
+En sprint är mellan 1 till 4 veckor lång och inleds av sprint planning. 
+Detta är ett möte där product backlog gås igenom och genom varierande estimeringsmetoder skapas sprint backlog.
+Var dag under sprinten ska ett 15 minuter långt möte hållas. Ett så kallat daily scrum. 
+Daily scrum är ett sätt att hålla koll hur arbetet med sprint backlog går. 
+
+Efter en sprint hålls två möten. En sprint review och en sprint retrospective.
+Under sprint review presenterar utvecklingsteamet resultatet av sprinten och produktägaren presenterar 
+en ny och uppdaterad product backlog. Tillslut hålls sprint retrospective där alla berörda parter går igenom vad som gått bra, 
+vad som går att förbättra och vad alla kan lära sig av detta.
+
+Analys: 
+
+Av förklarliga skäl har jag inte jobbat med scrum under min enskilda uppgift men gjorde det dock under gruppuppgiften. 
+Jag hamnade i en väldigt bra grupp och alla köpte konceptet med scrum på en gång och gjorde allt för utgå ifrån det i sitt arbete.
+Under sådana förusättningar skulle jag säga att scrum är ultimat. Vi jobbade väldigt effektivt och det var lätt att se hur vi låg 
+till under arbetets gång. Både med hjälp av trello, som förvisso är baserat på kanban, men framförallt av daily scrum. Vi höll inte daily scrums varje dag
+utan bara de dagar som vi faktiskt jobbade med projektet. En till fördel jag ser med daily scrum är att man på ett naturligt sätt 
+kan få en lägesbild över alla i utvecklingsteamets välmående. 
+
+Slutligen skulle jag vilja påstå att Scrum passar mig väldigt bra. Den strukturering av arbetet den medför gör det väldigt lätt att jobba effektivt.
+
+
+* Verktyg jag använt för att försöka skapa en tillgänglig hemsida.
+1 https://webbriktlinjer.se/riktlinjer/ (Lista över tillgänglighetsriktlinjer)
+2 https://coolors.co/contrast-checker/ (Hemsida där man kan kolla kontrasten mellan två färger)
+3 https://web.dev/measure/ (Hemsida där man i stort kan se hur tillgänglig en hemsida är)
+4 https://validator.w3.org/(Hemsida där man kan se om ens kod validerar)
+5 MonoChrome (Ett tillägg till chrome som visar browsern i monokrom färgskala)
