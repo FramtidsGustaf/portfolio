@@ -1,4 +1,6 @@
 /*This partial style the desktop version of the Portfolio page*/
+
+/*the container of the portfolio logos*/
 @mixin portfolioLogosContainer($color) {
   align-self: center;
   justify-self: center;
@@ -14,6 +16,7 @@
     text-decoration: none;
   }
 }
+/*styles the bobblePupper logo*/
 @mixin bobblePupperLogo($size, $shadow) {
   font-size: $size;
   font-family: "Fredoka One", cursive;
@@ -22,6 +25,7 @@
   text-shadow: $shadow $shadow #0e0e11;
   transition: all 0.3s ease-in-out;
 }
+/*styles the quiz logo*/
 @mixin quizLogo($size) {
   font-family: "PT Mono", monospace;
   font-size: $size;
@@ -29,12 +33,14 @@
   user-select: none;
   transition: all 0.3s ease-in-out;
 }
+/*The portfolio page*/
 .portfolioPage {
   @include pages($portfolio);
   display: grid;
   grid-template-columns: 5% 90% 5%;
   grid-template-rows: 5% 45% 45% 5%;
 
+  /*the booblePupper logo*/
   #bobblePupper {
     grid-column: 2;
     grid-row: 2;
@@ -55,9 +61,11 @@
       }
     }
   }
+  /*hides the bobblePupper*/
   .hideBobblePupper {
     transform: translateY(-300%);
   }
+  /*the quiz logo*/
   #quiz {
     grid-column: 2;
     grid-row: 3;
@@ -85,6 +93,7 @@
       }
     }
   }
+  /*hides the quiz*/
   .hideQuiz {
     transform: translateY(300%);
   }

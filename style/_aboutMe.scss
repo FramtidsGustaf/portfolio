@@ -1,4 +1,7 @@
 /*This partial styles the desktop version of the About Me page*/
+/*All the classes that is called "hidden" are used to hide the class/element it is emeded in*/
+
+/*The buttons*/
 @mixin aboutMeButtons {
   color: $textMenu;
   background-color: $backgroundMenu;
@@ -24,6 +27,7 @@
     color: $backgroundMenu;
   }
 }
+/*Title inside about me*/
 @mixin acquierTitle($column, $row) {
   grid-column: $column;
   grid-row: $row;
@@ -45,7 +49,7 @@
   align-items: center;
   transition: all 0.3s ease-in-out;
 }
-
+/*the about me page*/
 .aboutMePage {
   @include pages($aboutMe);
   display: grid;
@@ -58,14 +62,17 @@
     grid-column: 1/3;
     grid-row: 1;
     width: fit-content;
+    /*My name*/
     h1 {
       font-size: 4rem;
     }
+    /*short description*/
     .subtitle {
       text-align: center;
       font-family: "Inconsolata", monospace;
     }
   }
+  /*The container for the buttons*/
   .buttons {
     grid-column: 3;
     grid-row: 1;
@@ -82,6 +89,7 @@
       @include aboutMeButtons();
     }
   }
+  /*The container for the content*/
   #card {
     margin: 2%;
     padding: 1%;
@@ -114,6 +122,7 @@
       &.hidden {
         transform: translateY(600%);
       }
+      /*the "etc-icon" is not an icon from font awesome so it's styled separate from the others*/
       .etc {
         text-decoration: none;
         color: $textMenu;
@@ -126,6 +135,7 @@
         }
       }
     }
+    /*the icons from font awesome*/
     .skillIcons {
       font-size: 6.5vw;
       color: $textMenu;
@@ -135,6 +145,7 @@
       }
     }
   }
+  /*The title that says the name of the education*/
   .educationTitle {
     font-family: "Inconsolata", monospace;
     grid-column: 1/3;
@@ -147,6 +158,7 @@
       transform: translate(-200%);
     }
   }
+  /*The nackademi logo*/
   .nackademin {
     grid-column: 2/3;
     grid-row: 1;
@@ -167,6 +179,7 @@
       transform: translate(200%);
     }
   }
+  /*The brief explanation of the education*/
   .educationList {
     margin-left: 10%;
     grid-column: 1/3;
@@ -181,6 +194,7 @@
       transform: translateY(200%);
     }
   }
+  /*The container for the text about me*/
   .textContainer {
     width: 120%;
     align-self: center;
@@ -189,6 +203,7 @@
     display: flex;
     flex-direction: column;
     align-content: space-between;
+    /*the hi over the text*/
     .hiAboutMe {
       font-size: 3rem;
       color: $aboutMe;
@@ -210,6 +225,7 @@
       }
     }
   }
+  /*The wonderfull picture of me and twå borsoi puppies*/
   .puppiePicture {
     justify-self: flex-end;
     align-self: flex-end;

@@ -1,10 +1,16 @@
-/*This partial style the desktop version of the Contact Me Page*/
+/*This partial styles the desktop version of the Contact Me Page*/
+/*The revealIcon class is used to reveal the element it is emeded in*/
+
+/*This mixin was used by both the mobile and desktop initially.
+it still works though. Looks strange but dont fix whats not broken*/
 @mixin contactMe($placement, $color) {
   color: $color;
   font-size: 10rem;
   transition: all 0.3s ease-out;
   transform: translate($placement);
 }
+/*the contactMe mixin is nested inside this mixin to keep the code dry*/
+/*it ads on a fue features that is not used in the mobile version*/
 @mixin contacMeDesktop($placement, $color, $hoverColor) {
   @include contactMe($placement, $color);
   cursor: pointer;
@@ -14,12 +20,13 @@
     transform: scale(1.4);
   }
 }
+/*Contact me page not to much styling going on here*/
 .contactMePage {
   @include pages($contactMe);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
+  /*The linkedIn Logo*/
   #linkedInContainer {
     .linkedIn {
       @include contacMeDesktop(-1000%, $backgroundMenu, $textMenu);
@@ -28,6 +35,7 @@
       transform: translate(0%);
     }
   }
+  /*The github logo*/
   #githubContainer {
     .github {
       @include contacMeDesktop(1000%, $backgroundMenu, $textMenu);

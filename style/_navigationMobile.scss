@@ -1,14 +1,18 @@
 /*This partial styles the mobile version of the Navigation section*/
+
+/*this styles the menu option thats been pressed*/
 @mixin picked($color) {
   background-color: $color;
   color: $backgroundMenu;
 }
+/*this styles the menu*/
 @mixin menuList($size) {
   color: $textMenu;
   font-family: "Varela Round", sans-serif;
   font-size: $size;
   list-style: none;
 }
+/*this styles each menu option*/
 @mixin menuItems {
   width: fit-content;
   border-radius: 2px;
@@ -16,31 +20,39 @@
   transform: translate(-150%);
   transition: transform 0.3s ease-out;
 }
+/*the container of the list that is the menu*/
 .listContainer {
   grid-column: 2;
   grid-row: 2;
+  /*the menu itself*/
   #menuList {
     @include menuList(2.5rem);
+    /*each menu option*/
     .menuItems {
       @include menuItems();
+      /*Unhides the menu option from the landing page*/
+      &.revealMenuItem {
+        transform: translate(0%);
+      }
     }
-    .revealMenuItem {
-      transform: translate(0%);
-    }
+    /*when the about me option been picked*/
     .picked0 {
       @include picked($aboutMe);
       transform: rotate(180deg);
     }
+    /*when the portfolio option been picked*/
     .picked1 {
       @include picked($portfolio);
       transform: rotate(180deg);
     }
+    /*when the contact me option been picked*/
     .picked2 {
       @include picked($contactMe);
       transform: rotate(180deg);
     }
   }
 }
+/*this reveals every page*/
 .revealPage {
   transform: translate(0%);
 }

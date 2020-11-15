@@ -1,4 +1,8 @@
 /*This partial styles the mobile version of the Landing page*/
+
+/*This mixin doesnt make the code more dry I just like the 
+concept of mixins. It reminds me of methods and functions in programing*/
+/*The hi that reveals itself when button on landingpage is pressed*/
 @mixin hi {
   width: fit-content;
   font-family: "Varela Round", sans-serif;
@@ -9,11 +13,13 @@
   transition: all 0.4s ease-in-out;
   user-select: none;
 }
+/*This mixin makes the button on landingpage disapear*/
 @mixin starButtonDisapear {
   animation-name: buttonDisapear;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+/*The button on langingpage*/
 @mixin startButton {
   height: fit-content;
   width: fit-content;
@@ -33,6 +39,7 @@
   user-select: none;
   z-index: 1;
 }
+/*the text on landingpage*/
 .landingText {
   width: fit-content;
   font-family: "Varela Round", sans-serif;
@@ -41,6 +48,7 @@
   @include absolute(50%, 30%);
   transform: translate(-50%);
   transition: all 0.4s;
+  /*a span to make the hi a different color*/
   span {
     color: $aboutMe;
   }
@@ -48,15 +56,18 @@
 .hideLandingText {
   left: 150%;
 }
+/*the hi*/
 .hi {
   @include hi();
 }
 .hideHi {
   color: transparent;
 }
+/*The startbutton*/
 .startButton {
   @include startButton();
 }
+/*button disapears*/
 .buttonDisapear {
   @include starButtonDisapear();
 }

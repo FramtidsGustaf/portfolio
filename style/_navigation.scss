@@ -1,14 +1,18 @@
 /*This partial styles the desktop version of the Navigation section*/
+
+/*this styles the menu option thats been pressed*/
 @mixin picked($color) {
   background-color: $color;
   color: $backgroundMenu;
 }
+/*this styles the menu*/
 @mixin menuList($size) {
   color: $textMenu;
   font-family: "Varela Round", sans-serif;
   font-size: $size;
   list-style: none;
 }
+/*this styles each menu option*/
 @mixin menuItems {
   width: fit-content;
   border-radius: 2px;
@@ -16,41 +20,49 @@
   transform: translate(-150%);
   transition: transform 0.3s ease-out;
 }
+/*the container of the list that is the menu*/
 .listContainer {
   grid-area: menu;
   display: flex;
   align-items: flex-end;
   margin-bottom: 10px;
+  /*the menu itself*/
   #menuList {
     @include menuList(3rem);
+    /*each menu option*/
     .menuItems {
       @include menuItems();
       cursor: pointer;
       margin-left: 10px;
       padding: 2px;
-
+      /*how each menu option looks when hovered*/
       &:hover {
         background-color: $textMenu;
         color: $backgroundMenu;
       }
+      /*Unhides the menu option from the landing page*/
+      &.revealMenuItem {
+        transform: translate(0%);
+      }
     }
-    .revealMenuItem {
-      transform: translate(0%);
-    }
+    /*when the about me option been picked*/
     .picked0 {
       @include picked($aboutMe);
       transform: rotate(-5deg);
     }
+    /*when the portfolio option been picked*/
     .picked1 {
       @include picked($portfolio);
       transform: rotate(-5deg);
     }
+    /*when the contact me option been picked*/
     .picked2 {
       @include picked($contactMe);
       transform: rotate(-5deg);
     }
   }
 }
+/*this reveals every page*/
 .revealPage {
   transform: translateY(0%);
 }

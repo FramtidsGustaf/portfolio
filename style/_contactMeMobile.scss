@@ -1,16 +1,21 @@
 /*This partial styles the mobile version of the Contact Me page*/
+/*The revealIcon class is used to reveal the element it is emeded in*/
+
+/*this mixin sets the initial placement and the color of the icon*/
 @mixin contactMeMobile($placement, $color) {
   color: $color;
   font-size: 10rem;
   transition: all 0.3s ease-out;
   transform: translate($placement);
 }
+/*Contact me page not to much styling going on here*/
 .contactMePage {
   @include pagesMobile($contactMe);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 
+  /*The linkedIn Logo*/
   #linkedInContainer {
     .linkedIn {
       @include contactMeMobile(-1000%, $backgroundMenu);
@@ -19,6 +24,7 @@
       transform: translate(0%);
     }
   }
+  /*The github logo*/
   #githubContainer {
     .github {
       @include contactMeMobile(1000%, $backgroundMenu);

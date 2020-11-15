@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*This is the main scss file where everything is compiled to css*/
 /*This partial stores all the colors*/
 * {
@@ -23,10 +24,31 @@ body {
     overflow: hidden;
     padding-top: 5%;
     /*This partial styles the mobile version of the Landing page*/
+    /*This mixin doesnt make the code more dry I just like the 
+    concept of mixins. It reminds me of methods and functions in programing*/
+    /*The hi that reveals itself when button on landingpage is pressed*/
+    /*This mixin makes the button on landingpage disapear*/
+    /*The button on langingpage*/
+    /*the text on landingpage*/
+    /*the hi*/
+    /*The startbutton*/
+    /*button disapears*/
     /*This partial styles the mobile version of the About Me page*/
     /*This partial style the mobile version of the Portfolio page*/
+    /*the container of the portfolio logos*/
+    /*styles the bobblePupper logo*/
+    /*styles the quiz logo*/
+    /*The portfolio page*/
     /*This partial styles the mobile version of the Contact Me page*/
+    /*The revealIcon class is used to reveal the element it is emeded in*/
+    /*this mixin sets the initial placement and the color of the icon*/
+    /*Contact me page not to much styling going on here*/
     /*This partial styles the mobile version of the Navigation section*/
+    /*this styles the menu option thats been pressed*/
+    /*this styles the menu*/
+    /*this styles each menu option*/
+    /*the container of the list that is the menu*/
+    /*this reveals every page*/
   }
   .main .landingText {
     width: fit-content;
@@ -38,6 +60,7 @@ body {
     top: 30%;
     transform: translate(-50%);
     transition: all 0.4s;
+    /*a span to make the hi a different color*/
   }
   .main .landingText span {
     color: #ffba49;
@@ -106,6 +129,13 @@ body {
     padding: 2%;
     color: #171d1c;
     overflow: scroll;
+    /*title that diplays my knowlegde*/
+    /*title that displays my future knowledge*/
+    /*the icons from font awesome*/
+    /*The title that says the name of the education*/
+    /*The nackademi logo*/
+    /*The brief explanation of the education*/
+    /*The container for the text about me*/
   }
   .main .aboutMePage .title {
     width: fit-content;
@@ -147,6 +177,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    /*the "etc-icon" is not an icon from font awesome so it's styled separate from the others*/
   }
   .main .aboutMePage .skillsToAcquier .etc {
     text-decoration: none;
@@ -184,6 +215,9 @@ body {
   .main .aboutMePage .educationList li {
     margin: 2%;
   }
+  .main .aboutMePage .textContainer {
+    /*the hi over the text*/
+  }
   .main .aboutMePage .textContainer .hiAboutMe {
     font-size: 3rem;
     color: #ffba49;
@@ -211,6 +245,10 @@ body {
     display: grid;
     grid-template-columns: 5% 90% 5%;
     grid-template-rows: 5% 45% 45% 5%;
+    /*the booblePupper logo*/
+    /*hides the bobblePupper*/
+    /*the quiz logo*/
+    /*hides the quiz*/
   }
   .main .portfolioPage #bobblePupper {
     grid-column: 2;
@@ -300,6 +338,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    /*The linkedIn Logo*/
+    /*The github logo*/
   }
   .main .contactMePage #linkedInContainer .linkedIn {
     color: #171d1c;
@@ -322,12 +362,17 @@ body {
   .main .listContainer {
     grid-column: 2;
     grid-row: 2;
+    /*the menu itself*/
   }
   .main .listContainer #menuList {
     color: #efe9f4;
     font-family: "Varela Round", sans-serif;
     font-size: 2.5rem;
     list-style: none;
+    /*each menu option*/
+    /*when the about me option been picked*/
+    /*when the portfolio option been picked*/
+    /*when the contact me option been picked*/
   }
   .main .listContainer #menuList .menuItems {
     width: fit-content;
@@ -335,8 +380,9 @@ body {
     user-select: none;
     transform: translate(-150%);
     transition: transform 0.3s ease-out;
+    /*Unhides the menu option from the landing page*/
   }
-  .main .listContainer #menuList .revealMenuItem {
+  .main .listContainer #menuList .menuItems.revealMenuItem {
     transform: translate(0%);
   }
   .main .listContainer #menuList .picked0 {
@@ -369,10 +415,38 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: ". mainContent mainContent" ". mainContent mainContent" "menu mainContent mainContent";
     /*This partial styles the desktop version of the Landing page*/
+    /*This mixin doesnt make the code more dry I just like the 
+    concept of mixins. It reminds me of methods and functions in programing*/
+    /*The hi that reveals itself when button on landingpage is pressed*/
+    /*The button on langingpage*/
+    /*As i said about me liking mixins*/
+    /*This mixin makes the button on landingpage disapear*/
+    /*the text on landingpage*/
+    /*the hi*/
+    /*The startbutton*/
     /*This partial styles the desktop version of the About Me page*/
+    /*All the classes that is called "hidden" are used to hide the class/element it is emeded in*/
+    /*The buttons*/
+    /*Title inside about me*/
+    /*the about me page*/
     /*This partial style the desktop version of the Portfolio page*/
-    /*This partial style the desktop version of the Contact Me Page*/
+    /*the container of the portfolio logos*/
+    /*styles the bobblePupper logo*/
+    /*styles the quiz logo*/
+    /*The portfolio page*/
+    /*This partial styles the desktop version of the Contact Me Page*/
+    /*The revealIcon class is used to reveal the element it is emeded in*/
+    /*This mixin was used by both the mobile and desktop initially.
+    it still works though. Looks strange but dont fix whats not broken*/
+    /*the contactMe mixin is nested inside this mixin to keep the code dry*/
+    /*it ads on a fue features that is not used in the mobile version*/
+    /*Contact me page not to much styling going on here*/
     /*This partial styles the desktop version of the Navigation section*/
+    /*this styles the menu option thats been pressed*/
+    /*this styles the menu*/
+    /*this styles each menu option*/
+    /*the container of the list that is the menu*/
+    /*this reveals every page*/
   }
   .main .landingText {
     position: absolute;
@@ -385,6 +459,7 @@ body {
     transform: translate(-50%);
     transition: all 0.4s;
     user-select: none;
+    /*a span to make the hi a different color*/
   }
   .main .landingText span {
     color: #ffba49;
@@ -404,7 +479,7 @@ body {
     transition: all 0.4s ease-in-out;
     user-select: none;
   }
-  .main .hideHi {
+  .main .hi.hideHi {
     color: transparent;
   }
   .main .startButton {
@@ -427,13 +502,15 @@ body {
     cursor: pointer;
     user-select: none;
     z-index: 1;
+    /*button disapears*/
+    /*the animation timeline*/
   }
   .main .startButton:hover {
     background-color: #171d1c;
     color: #efe9f4;
     border: solid 2px #efe9f4;
   }
-  .main .buttonDisapear {
+  .main .startButton.buttonDisapear {
     animation-name: buttonDisapear;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -458,11 +535,20 @@ body {
     font-family: "Varela Round", sans-serif;
     padding: 2%;
     color: #171d1c;
+    /*The container for the buttons*/
+    /*The container for the content*/
+    /*The title that says the name of the education*/
+    /*The nackademi logo*/
+    /*The brief explanation of the education*/
+    /*The container for the text about me*/
+    /*The wonderfull picture of me and twå borsoi puppies*/
   }
   .main .aboutMePage .title {
     grid-column: 1/3;
     grid-row: 1;
     width: fit-content;
+    /*My name*/
+    /*short description*/
   }
   .main .aboutMePage .title h1 {
     font-size: 4rem;
@@ -562,6 +648,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, 50%);
+    /*the icons from font awesome*/
   }
   .main .aboutMePage #card .titleAcquiered {
     grid-column: 1;
@@ -613,6 +700,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     transition: all 0.3s ease-in-out;
+    /*the "etc-icon" is not an icon from font awesome so it's styled separate from the others*/
   }
   .main .aboutMePage #card .skillsToAcquier.hidden {
     transform: translateY(600%);
@@ -690,6 +778,7 @@ body {
     display: flex;
     flex-direction: column;
     align-content: space-between;
+    /*the hi over the text*/
   }
   .main .aboutMePage .textContainer .hiAboutMe {
     font-size: 3rem;
@@ -735,6 +824,10 @@ body {
     display: grid;
     grid-template-columns: 5% 90% 5%;
     grid-template-rows: 5% 45% 45% 5%;
+    /*the booblePupper logo*/
+    /*hides the bobblePupper*/
+    /*the quiz logo*/
+    /*hides the quiz*/
   }
   .main .portfolioPage #bobblePupper {
     grid-column: 2;
@@ -833,6 +926,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    /*The linkedIn Logo*/
+    /*The github logo*/
   }
   .main .contactMePage #linkedInContainer .linkedIn {
     color: #171d1c;
@@ -869,12 +964,17 @@ body {
     display: flex;
     align-items: flex-end;
     margin-bottom: 10px;
+    /*the menu itself*/
   }
   .main .listContainer #menuList {
     color: #efe9f4;
     font-family: "Varela Round", sans-serif;
     font-size: 3rem;
     list-style: none;
+    /*each menu option*/
+    /*when the about me option been picked*/
+    /*when the portfolio option been picked*/
+    /*when the contact me option been picked*/
   }
   .main .listContainer #menuList .menuItems {
     width: fit-content;
@@ -885,12 +985,14 @@ body {
     cursor: pointer;
     margin-left: 10px;
     padding: 2px;
+    /*how each menu option looks when hovered*/
+    /*Unhides the menu option from the landing page*/
   }
   .main .listContainer #menuList .menuItems:hover {
     background-color: #efe9f4;
     color: #171d1c;
   }
-  .main .listContainer #menuList .revealMenuItem {
+  .main .listContainer #menuList .menuItems.revealMenuItem {
     transform: translate(0%);
   }
   .main .listContainer #menuList .picked0 {

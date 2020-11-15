@@ -34,6 +34,7 @@
   .titleNotAcquiered {
     display: none;
   }
+  /*title that diplays my knowlegde*/
   .acquieredSkills {
     text-shadow: 0.2em 0.2em 0.2em $backgroundMenu;
     border-radius: 3px;
@@ -42,6 +43,7 @@
     justify-content: space-evenly;
     align-items: center;
   }
+  /*title that displays my future knowledge*/
   .skillsToAcquier {
     text-shadow: 0.2em 0.2em 0.2em $backgroundMenu;
     border-radius: 3px;
@@ -49,6 +51,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    /*the "etc-icon" is not an icon from font awesome so it's styled separate from the others*/
     .etc {
       text-decoration: none;
       color: $textMenu;
@@ -58,11 +62,12 @@
       margin-bottom: 1rem;
     }
   }
+  /*the icons from font awesome*/
   .skillIcons {
     font-size: 3rem;
     color: $textMenu;
   }
-
+  /*The title that says the name of the education*/
   .educationTitle {
     font-family: "Inconsolata", monospace;
     font-size: 1rem;
@@ -70,6 +75,7 @@
     user-select: none;
     margin-bottom: 5%;
   }
+  /*The nackademi logo*/
   .nackademin {
     margin: 8% 0 5% 0;
     display: flex;
@@ -79,6 +85,7 @@
       height: 1.5rem;
     }
   }
+  /*The brief explanation of the education*/
   .educationList {
     margin-left: 10%;
     margin-bottom: 5%;
@@ -88,7 +95,9 @@
       margin: 2%;
     }
   }
+  /*The container for the text about me*/
   .textContainer {
+    /*the hi over the text*/
     .hiAboutMe {
       font-size: 3rem;
       color: $aboutMe;
