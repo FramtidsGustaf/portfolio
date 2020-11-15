@@ -62,6 +62,10 @@ sig såklart av grafiska profiler.
 En grafisk profil är en visuell identitet som används för att särskilja bl.a. företag, myndigheter och organisationer från andra aktörer.
 Den kan t.ex. bestå av olika typsnitt, färger och logotyper men även en beskrivning kring i vilka sammanhang en färg eller ett typsnitt skall användas.
 En stark grafisk profil blir viktigare och viktigare för att sticka ut och för att fastna i potentiella kunders eller användares medvetande.
+Som utvecklare är inte min huvudsakliga uppgift att designa hemsidor. Min uppgift är att bygga en hemsida efter de krav som kunden har.
+Jag kan förstå att det kan vara lite kämpigt för vissa och säkert även för mig att följa en design eller grafisk profil som man inte själv 
+tycker är bra. Här tror jag att utmaningen ligger i att se sitt yrke för vad det verkligen är. Jag ska skapa något utifrån vad någon 
+annan vill ha inte utifrån vad jag vill göra.
 
 
 Scrum 
