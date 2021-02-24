@@ -38,17 +38,17 @@
     /*when the about me option been picked*/
     .picked0 {
       @include picked($aboutMe);
-      transform: rotate(180deg);
+      transform: rotate(180deg) !important;
     }
     /*when the portfolio option been picked*/
     .picked1 {
       @include picked($portfolio);
-      transform: rotate(180deg);
+      transform: rotate(180deg) !important;
     }
     /*when the contact me option been picked*/
     .picked2 {
       @include picked($contactMe);
-      transform: rotate(180deg);
+      transform: rotate(180deg) !important;
     }
   }
 }

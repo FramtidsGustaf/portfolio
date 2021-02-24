@@ -388,17 +388,17 @@ body {
   .main .listContainer #menuList .picked0 {
     background-color: #ffba49;
     color: #171d1c;
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
   }
   .main .listContainer #menuList .picked1 {
     background-color: #bff0a3;
     color: #171d1c;
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
   }
   .main .listContainer #menuList .picked2 {
     background-color: #ff8b8b;
     color: #171d1c;
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
   }
   .main .revealPage {
     transform: translate(0%);
@@ -998,17 +998,17 @@ body {
   .main .listContainer #menuList .picked0 {
     background-color: #ffba49;
     color: #171d1c;
-    transform: rotate(-5deg);
+    transform: rotate(-5deg) !important;
   }
   .main .listContainer #menuList .picked1 {
     background-color: #bff0a3;
     color: #171d1c;
-    transform: rotate(-5deg);
+    transform: rotate(-5deg) !important;
   }
   .main .listContainer #menuList .picked2 {
     background-color: #ff8b8b;
     color: #171d1c;
-    transform: rotate(-5deg);
+    transform: rotate(-5deg) !important;
   }
   .main .revealPage {
     transform: translateY(0%);
